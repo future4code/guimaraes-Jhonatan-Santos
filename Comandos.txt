@@ -1,0 +1,5282 @@
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando (master)
+$ cat readme.md
+Assassinato na Linha de Comando
+===============================
+
+        .OOOOOOOOOOOOOOO @@                                   @@ OOOOOOOOOOOOOOOO.
+        OOOOOOOOOOOOOOOO @@                                    @@ OOOOOOOOOOOOOOOO
+        OOOOOOOOOO'''''' @@                                    @@ ```````OOOOOOOOO
+        OOOOO'' aaa@@@@@@@@@@@@@@@@@@@@"""                   """""""""@@aaaa `OOOO
+        OOOOO,""""@@@@@@@@@@@@@@""""                                     a@"" OOOA
+        OOOOOOOOOoooooo,                                            |OOoooooOOOOOS
+        OOOOOOOOOOOOOOOOo,                                          |OOOOOOOOOOOOC
+        OOOOOOOOOOOOOOOOOO                                         ,|OOOOOOOOOOOOI
+        OOOOOOOOOOOOOOOOOO @          ASSASSINATO                  |OOOOOOOOOOOOOI
+        OOOOOOOOOOOOOOOOO'@           NA                           OOOOOOOOOOOOOOb
+        OOOOOOOOOOOOOOO'a'            LINHA                        |OOOOOOOOOOOOOy
+        OOOOOOOOOOOOOO''              DE                           aa`OOOOOOOOOOOP
+        OOOOOOOOOOOOOOb,..            COMANDO                       `@aa``OOOOOOOh
+        OOOOOOOOOOOOOOOOOOo                                           `@@@aa OOOOo
+        OOOOOOOOOOOOOOOOOOO|                                             @@@ OOOOe
+        OOOOOOOOOOOOOOOOOOO@                               aaaaaaa       @@',OOOOn
+        OOOOOOOOOOOOOOOOOOO@                        aaa@@@@@@@@""        @@ OOOOOi
+        OOOOOOOOOO~~ aaaaaa"a                 aaa@@@@@@@@@@""            @@ OOOOOx
+        OOOOOO aaaa@"""""""" ""            @@@@@@@@@@@@""               @@@|`OOOO'
+        OOOOOOOo`@@a                  aa@@  @@@@@@@""         a@        @@@@ OOOO9
+        OOOOOOO'  `@@a               @@a@@   @@""           a@@   a     |@@@ OOOO3
+        `OOOO'       `@    aa@@       aaa"""          @a        a@     a@@@',OOOO'
+cle
+
+Aconteceu um assassinato na Cidade do Terminal, e a polícia precisa da sua ajuda.
+
+Para descobrir o culpado, você precisará de acesso a uma linha de comando.
+
+## Instruções
+
+Abra um terminal, vá até o diretório `assassinato-na-linha-de-comando`, e comece
+lendo o arquivo `inicio`. Uma forma de fazer isto é com o seguinte comando:
+
+        cat inicio
+
+Não use um editor de texto para ler os arquivos! A ideia é aprender a usar os
+comandos básicos do Unix para resolver o mistério.
+
+Aqui está um resumo de alguns comandos que poderão ser úteis (você também pode
+usar outros além desses):cat
+
+- `cd`: muda o diretório atual.
+- `ls`: lista arquivos existentes em um diretório.
+- `cat`: imprime o conteúdo de um ou mais arquivos.
+- `head`: imprime as primeiras linhas de um arquivo.
+- `tail`: imprime as últimas linhas de um arquivo.
+- `grep`: busca um texto em um ou mais arquivos. Por padrão, imprime na saída
+as linhas que continham o texto buscado.
+
+### Dicas
+
+- Não se esqueça de que a maioria dos comandos aceita opções para alterar o
+comportamento (por exemplo, formatar a saída de um jeito diferente). Utilize
+o comando `man` para saber mais sobre as opções aceitas por um comando,
+e.g. `man grep`.
+
+- Dicas de como avançar no enigma serão dadas no decorrer da tarde.
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando (master)
+$ cat inicio
+Aconteceu um assassinato na Cidade do Terminal, e a polícia precisa da sua ajuda.
+
+Para descobrir o culpado, vá até o subdiretório "misterio" e comece investigando
+por lá.
+
+Você provavelmente vai querer começar analisando todas as pistas que foram
+encontradas na cena do crime (arquivo "cena-do-crime").
+
+Os policiais que analisaram a cena foram bastante detalhistas e colocaram, neste
+arquivo, TUDO que encontraram.
+
+Felizmente, o sargento analisou o relatório e marcou as pistas reais com a
+palavra "PISTA", em maiúsculas.
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando (master)
+$ cd misterio
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep PISTA cena-do-crime
+PISTA: A filmagem do caixa eletrônico está embaçada, mas mostra que o suspeito é um homem alto, pelo menos 1,83m de altura.
+PISTA: Encontramos uma carteira que provavelmente pertence ao assassino. Nenhum documento de identidade, apenas alguns trocados e carteirinhas dos grupos AAA, Delta SkyMiles, biblioteca e do Museu de História do Bash. Impossível rastrear as carteirinhas, e nenhuma delas possui nome, por algum motivo.
+PISTA: Interrogamos o garçom da cafeteria próxima à cena. Ele disse que uma mulher saiu da cafeteria logo antes de ouvirem os tiros. O nome dela era Annabel, tinha cabelo loiro curto e um sotaque da Nova Zelândia.
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ ls
+associacoes/  automoveis  cena-do-crime  entrevistas/  pessoas  ruas/
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ head pessoas
+***************
+Para ir até a rua em que uma pessoa mora, utilize o arquivo com o nome da
+rua, localizado no subdiretório "ruas".
+
+Para bater na porta da pessoa e investigar, leia o número da linha retirado
+deste arquivo.
+
+Se o conteúdo de uma linha não fizer nenhum sentido, você está na linha errada.
+***************
+
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep Annabel pessoas
+Annabel Sun     F       26      Vila Hart, linha 40
+Oluwasegun Annabel      M       37      Rua Mattapan, linha 173
+Annabel Church  F       38      Vila Buckingham, linha 179
+Annabel Fuglsang        M       40      Rua Haley, linha 176
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ cd ruas
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/ruas (master)
+$ head -n 40 Vila_Hart
+downhills exaggerates outgo rebating rhyming militarizes
+rakishly lithographs inserts
+humanism revolt hoggish tuner hoofs frizziest
+strippers toady framers bakes mandate
+pear graver drubbing reinvest abnormality teetotal lend
+stipulate attiring sprint tunnelings sera merrily proofreaders
+enthroning tuber onrushes pat a rows degrades parleyed
+probationer irresponsibility spongier smirking diminished
+stipulations dandle repetitious enervate
+reunion insert unhand heartbeat busheling teakettles dismayed
+plug hates easiest jabbered destining agglutinates
+ambitious swaggering ties annoyed battleground
+intuitively humbugs ribaldry suspend
+bedspreads expansionists restfullest
+dilated outstrips teapot fluoridates shops mammoth
+baron zoos teeter falloffs fishes invalidating
+patrols knelling rosining lightness unburden
+surfeited absurdity plexus rebuses leaking standing
+sizable punter bagginess dissenters
+postmarking spades overdraft pointillism
+stymie treadles extortionists dietitians agonies spitefuller
+multiplied submits despotism adventurous ballsier
+parody mania leftism tranquilize sexpots stupor parleying
+triumphing whiskered razing danger preordains
+faker preparatory gabbing mavens vamped
+idles tents oratorios butternuts upholsterers sassafras
+damnedest apologists inveigh
+propriety tossed parallelling town kinkier quarantine
+oxymoron nonmembers taproots
+snakebite dramatizing dawdling enlightening
+swastikas fragrant voluble stowing
+grammarian shah ambushed alines varmints doze detains
+wondrous uphold tests appetites wilier beautifiers
+drifts dosages leprosy rashers badmouth jugglers
+snot appals primes whet annular tonality
+shivery kingdom supplements envying
+the slayer gesture waged twenties ratifying baling mortals
+doggie probationary demurer fatness
+stupendous prolonged smog naps
+LEIA A ENTREVISTA #47246024
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/ruas (master)
+$ head -n 40 Vila_Hart | tail -n 1
+LEIA A ENTREVISTA #47246024
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/ruas (master)
+$ cd ..
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ ls
+associacoes/  automoveis  cena-do-crime  entrevistas/  pessoas  ruas/
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ cd entrevistas
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/entrevistas (master)
+$ ls
+entrevista-000296    entrevista-11495001  entrevista-179719    entrevista-27042476  entrevista-325611    entrevista-409731    entrevista-499096    entrevista-5782759   entrevista-6884359   entrevista-7580872   entrevista-856221    entrevista-9408565
+entrevista-00448418  entrevista-116803    entrevista-1811770   entrevista-27504937  entrevista-32639981  entrevista-41553314  entrevista-50168425  entrevista-579105    entrevista-6894000   entrevista-77014856  entrevista-8586380   entrevista-94126412
+entrevista-00502304  entrevista-11705111  entrevista-18193261  entrevista-275706    entrevista-32712166  entrevista-416243    entrevista-50291987  entrevista-5835471   entrevista-69170457  entrevista-770439    entrevista-861780    entrevista-9437737
+entrevista-005702    entrevista-11783660  entrevista-1823688   entrevista-279087    entrevista-331178    entrevista-41814745  entrevista-504687    entrevista-586668    entrevista-6933068   entrevista-77135281  entrevista-862173    entrevista-944493
+entrevista-00617019  entrevista-11817172  entrevista-18270219  entrevista-280877    entrevista-332596    entrevista-4204949   entrevista-509105    entrevista-58910793  entrevista-699607    entrevista-7791374   entrevista-862717    entrevista-9446528
+entrevista-00805135  entrevista-1186827   entrevista-18441251  entrevista-2834518   entrevista-33399976  entrevista-42161907  entrevista-5143029   entrevista-5905106   entrevista-70067280  entrevista-780255    entrevista-8631232   entrevista-9501580
+entrevista-016463    entrevista-1205060   entrevista-1850922   entrevista-284560    entrevista-340396    entrevista-4223536   entrevista-514793    entrevista-591273    entrevista-70199425  entrevista-7863761   entrevista-86395001  entrevista-95095182
+entrevista-020337    entrevista-1250176   entrevista-1857368   entrevista-2846076   entrevista-34041151  entrevista-4225866   entrevista-52280505  entrevista-5993978   entrevista-703831    entrevista-789564    entrevista-865918    entrevista-95601730
+entrevista-022751    entrevista-125204    entrevista-1906958   entrevista-289524    entrevista-342393    entrevista-42396365  entrevista-528044    entrevista-60081985  entrevista-704443    entrevista-791289    entrevista-867999    entrevista-9618669
+entrevista-0234126   entrevista-125271    entrevista-191206    entrevista-290346    entrevista-34359897  entrevista-4262657   entrevista-529706    entrevista-604403    entrevista-70458099  entrevista-79360358  entrevista-8700943   entrevista-9620713
+entrevista-02422821  entrevista-1269181   entrevista-19300543  entrevista-291440    entrevista-344331    entrevista-42934869  entrevista-53318557  entrevista-608607    entrevista-7046684   entrevista-79411932  entrevista-87126591  entrevista-9651888
+entrevista-0251720   entrevista-1310392   entrevista-1933118   entrevista-2922290   entrevista-34690644  entrevista-4299898   entrevista-535181    entrevista-6093093   entrevista-7066082   entrevista-794525    entrevista-871877    entrevista-9666149
+entrevista-03098229  entrevista-13768464  entrevista-19577850  entrevista-29316965  entrevista-347303    entrevista-4335306   entrevista-5372865   entrevista-618764    entrevista-706620    entrevista-7959148   entrevista-879569    entrevista-97043057
+entrevista-0315125   entrevista-13889608  entrevista-2058907   entrevista-2939888   entrevista-351963    entrevista-4366523   entrevista-538900    entrevista-6203192   entrevista-707438    entrevista-796439    entrevista-8819490   entrevista-9709892
+entrevista-03316077  entrevista-13920860  entrevista-210355    entrevista-296128    entrevista-353218    entrevista-44533008  entrevista-54026669  entrevista-628618    entrevista-708943    entrevista-79667499  entrevista-891720    entrevista-9711852
+entrevista-034070    entrevista-1395414   entrevista-218131    entrevista-29680692  entrevista-353467    entrevista-4463090   entrevista-541518    entrevista-63308519  entrevista-7103823   entrevista-79935965  entrevista-896668    entrevista-9712946
+entrevista-0349327   entrevista-141030    entrevista-221039    entrevista-29741223  entrevista-354262    entrevista-448086    entrevista-5455315   entrevista-637657    entrevista-71186817  entrevista-7998181   entrevista-9004767   entrevista-9728756
+entrevista-04393507  entrevista-14153840  entrevista-223913    entrevista-2976680   entrevista-3588302   entrevista-45615686  entrevista-54619323  entrevista-637928    entrevista-71226767  entrevista-8095917   entrevista-901603    entrevista-97393699
+entrevista-044492    entrevista-144873    entrevista-2277882   entrevista-29838622  entrevista-3609204   entrevista-457117    entrevista-54851634  entrevista-638121    entrevista-71298441  entrevista-809922    entrevista-901645    entrevista-97409610
+entrevista-0462097   entrevista-14590717  entrevista-229443    entrevista-2995681   entrevista-36398447  entrevista-457451    entrevista-549055    entrevista-6417794   entrevista-7180973   entrevista-812725    entrevista-90394637  entrevista-980963
+entrevista-049721    entrevista-147283    entrevista-23167806  entrevista-301018    entrevista-364735    entrevista-466195    entrevista-55382746  entrevista-645385    entrevista-71993338  entrevista-81443363  entrevista-904020    entrevista-982013
+entrevista-05297663  entrevista-15187437  entrevista-2326746   entrevista-30259493  entrevista-36527398  entrevista-4673074   entrevista-55410365  entrevista-6553472   entrevista-720268    entrevista-822576    entrevista-907126    entrevista-9824821
+entrevista-06032377  entrevista-15354942  entrevista-23371263  entrevista-3049045   entrevista-376115    entrevista-46773428  entrevista-55435298  entrevista-65792229  entrevista-7254073   entrevista-8245680   entrevista-9074626   entrevista-98912259
+entrevista-0613334   entrevista-1536668   entrevista-233800    entrevista-305694    entrevista-37747405  entrevista-47246024  entrevista-55477243  entrevista-659803    entrevista-728181    entrevista-825165    entrevista-911451    entrevista-9901455
+entrevista-066291    entrevista-155049    entrevista-2415821   entrevista-305949    entrevista-3804339   entrevista-4735823   entrevista-555536    entrevista-66101490  entrevista-730123    entrevista-82705993  entrevista-91673757  entrevista-9912172
+entrevista-071537    entrevista-1578206   entrevista-243703    entrevista-306616    entrevista-3824641   entrevista-4765278   entrevista-5581158   entrevista-66282920  entrevista-73035802  entrevista-831512    entrevista-917210    entrevista-992072
+entrevista-0732631   entrevista-159848    entrevista-2481877   entrevista-3074127   entrevista-38299069  entrevista-476744    entrevista-55841398  entrevista-6643191   entrevista-7305678   entrevista-833367    entrevista-9185205   entrevista-99643550
+entrevista-07497003  entrevista-16098538  entrevista-250112    entrevista-3099757   entrevista-3871205   entrevista-478217    entrevista-55984022  entrevista-67279454  entrevista-73585672  entrevista-838259    entrevista-920304    entrevista-9969223
+entrevista-0768255   entrevista-1642421   entrevista-253705    entrevista-312546    entrevista-3871242   entrevista-48088300  entrevista-565396    entrevista-673985    entrevista-737609    entrevista-8387710   entrevista-92391023  entrevista-999372
+entrevista-092423    entrevista-1643440   entrevista-255531    entrevista-3128999   entrevista-38899905  entrevista-48148020  entrevista-566707    entrevista-676473    entrevista-7422077   entrevista-8402388   entrevista-92670500
+entrevista-0953437   entrevista-16889008  entrevista-25582311  entrevista-3140662   entrevista-3917097   entrevista-483817    entrevista-56784802  entrevista-67790846  entrevista-74225310  entrevista-8421696   entrevista-927642
+entrevista-096267    entrevista-17248453  entrevista-25834905  entrevista-31635890  entrevista-391811    entrevista-485229    entrevista-56892213  entrevista-680549    entrevista-7469675   entrevista-8464899   entrevista-9332386
+entrevista-102490    entrevista-17343208  entrevista-259909    entrevista-3201508   entrevista-39481114  entrevista-4950099   entrevista-57236791  entrevista-6808205   entrevista-7541406   entrevista-84688694  entrevista-9346061
+entrevista-109118    entrevista-174898    entrevista-2601508   entrevista-322305    entrevista-39825862  entrevista-4961376   entrevista-5739404   entrevista-68195573  entrevista-75434722  entrevista-849256    entrevista-93473333
+entrevista-1108561   entrevista-1767435   entrevista-26373485  entrevista-32365018  entrevista-40534453  entrevista-496772    entrevista-5766907   entrevista-68488577  entrevista-755037    entrevista-85262552  entrevista-93696502
+entrevista-114661    entrevista-17827186  entrevista-2642139   entrevista-324389    entrevista-40610944  entrevista-498331    entrevista-5774468   entrevista-68764140  entrevista-75633580  entrevista-8531248   entrevista-938991
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/entrevistas (master)
+$ cat entrevista-47246024
+A Srta. Sun tem cabelo castanho e não é da Nova Zelândia. Não é a testemunha da cafeteria.
+
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/entrevistas (master)
+$ cd ..
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ cd ruas
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/ruas (master)
+$ head -n 179 Vila_Buckingham | tail -n 1
+LEIA A ENTREVISTA #699607
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/ruas (master)
+$ cd ..
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ cd entrevistas
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/entrevistas (master)
+$ cat entrevista-699607
+Entrevistamos a Srta. Church às 14:04. A testemunha afirmou que não viu ninguém com as características do atirador e que saiu correndo assim que os tiros foram disparados.
+
+No entanto, ela reportou que viu um carro fugindo da cena do crime. Descreveu como um Honda azul, com placa que começa com "L337" e termina com "9".
+
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio/entrevistas (master)
+$ cd ..
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ ls
+associacoes/  automoveis  cena-do-crime  entrevistas/  pessoas  ruas/
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ head automoveis
+***************
+Informações de automóveis e proprietários obtidas com o
+Departamento de Trânsito da Cidade do Terminal.
+***************
+
+Placa T3YUHF6
+Marca: Toyota
+Cor: Amarela
+Proprietário: Jianbo Megannem
+Altura: 1,68 m
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep -A 3 -B 2 Honda automoveis
+
+Placa QOBSFKL
+Marca: Honda
+Cor: Azul
+Proprietário: Aurelie Kirkham
+Altura: 1,8 m
+--
+
+Placa Z4FCH97
+Marca: Honda
+Cor: Verde
+Proprietário: Christian Brata
+Altura: 1,93 m
+--
+
+Placa GGVB13U
+Marca: Honda
+Cor: Branca
+Proprietário: Erick Fedoriva
+Altura: 1,86 m
+--
+
+Placa ZRYI0P5
+Marca: Honda
+Cor: Verde
+Proprietário: Marianne Li
+Altura: 1,83 m
+--
+
+Placa OUM9U5D
+Marca: Honda
+Cor: Verde
+Proprietário: Emiliano Wenk
+Altura: 1,83 m
+--
+
+Placa WCXINOH
+Marca: Honda
+Cor: Dourada
+Proprietário: Hanna Huang
+Altura: 1,8 m
+--
+
+Placa S4YYXCA
+Marca: Honda
+Cor: Preta
+Proprietário: Catriona Mottram
+Altura: 1,91 m
+--
+
+Placa VLVLVE9
+Marca: Honda
+Cor: Branca
+Proprietário: Sun Brink
+Altura: 1,58 m
+--
+
+Placa L337ZR9
+Marca: Honda
+Cor: Vermelho
+Proprietário: Katie Park
+Altura: 1,88 m
+--
+
+Placa LJE7BAA
+Marca: Honda
+Cor: Laranja
+Proprietário: Jordan Voglsang
+Altura: 1,55 m
+--
+
+Placa 559DJPI
+Marca: Honda
+Cor: Branca
+Proprietário: Reza Scown
+Altura: 1,73 m
+--
+
+Placa YRBYSS5
+Marca: Honda
+Cor: Branca
+Proprietário: Severine Gibson
+Altura: 1,6 m
+--
+
+Placa N6D3RMF
+Marca: Honda
+Cor: Petróleo
+Proprietário: Vincent Darnel
+Altura: 1,88 m
+--
+
+Placa QQW9LAQ
+Marca: Honda
+Cor: Preta
+Proprietário: Lucas Bankier
+Altura: 1,8 m
+--
+
+Placa JQ4OWXH
+Marca: Honda
+Cor: Branca
+Proprietário: Artem Figere
+Altura: 1,86 m
+--
+
+Placa 4I8D0WO
+Marca: Honda
+Cor: Petróleo
+Proprietário: Brahim Wang
+Altura: 1,7 m
+--
+
+Placa 8BAFRKG
+Marca: Honda
+Cor: Petróleo
+Proprietário: Wouter Brennauer
+Altura: 1,55 m
+--
+
+Placa 7M841G6
+Marca: Honda
+Cor: Petróleo
+Proprietário: Matthew Lessard
+Altura: 1,7 m
+--
+
+Placa 7UNAZZC
+Marca: Honda
+Cor: Preta
+Proprietário: Richard Hybois
+Altura: 1,83 m
+--
+
+Placa L337P89
+Marca: Honda
+Cor: Petróleo
+Proprietário: Mike Bostock
+Altura: 1,93 m
+--
+
+Placa VAZS7KT
+Marca: Honda
+Cor: Verde
+Proprietário: Silvia Travica
+Altura: 1,63 m
+--
+
+Placa K58GVXT
+Marca: Honda
+Cor: Amarela
+Proprietário: Zach Esposito
+Altura: 1,7 m
+--
+
+Placa 2YLA2FC
+Marca: Honda
+Cor: Petróleo
+Proprietário: Huizi Accambray
+Altura: 1,86 m
+--
+
+Placa 7CHWJXE
+Marca: Honda
+Cor: Branca
+Proprietário: David Shvedova
+Altura: 1,63 m
+--
+
+Placa EL7J5EV
+Marca: Honda
+Cor: Vermelho
+Proprietário: Donatien Otoshi
+Altura: 1,63 m
+--
+
+Placa KCKGOH3
+Marca: Honda
+Cor: Azul
+Proprietário: Vladislava Tichelt
+Altura: 1,7 m
+--
+
+Placa E8XPHFK
+Marca: Honda
+Cor: Preta
+Proprietário: Abiodun Horvath
+Altura: 1,91 m
+--
+
+Placa G2PAOMN
+Marca: Honda
+Cor: Amarela
+Proprietário: Eva-Maria Speirs
+Altura: 1,55 m
+--
+
+Placa F2B8HKX
+Marca: Honda
+Cor: Preta
+Proprietário: Sara Walker
+Altura: 1,91 m
+--
+
+Placa JHDQQ74
+Marca: Honda
+Cor: Laranja
+Proprietário: Kaliese Sudol
+Altura: 1,93 m
+--
+
+Placa N00RAJU
+Marca: Honda
+Cor: Laranja
+Proprietário: Melek Toth
+Altura: 1,75 m
+--
+
+Placa HM8Q0G9
+Marca: Honda
+Cor: Vermelho
+Proprietário: Mel Quinonez
+Altura: 1,8 m
+--
+
+Placa UKJG9HU
+Marca: Honda
+Cor: Amarela
+Proprietário: Jing Monteiro
+Altura: 1,93 m
+--
+
+Placa TXYAEM7
+Marca: Honda
+Cor: Petróleo
+Proprietário: Franklin Koala
+Altura: 1,73 m
+--
+
+Placa VQXL95S
+Marca: Honda
+Cor: Amarela
+Proprietário: Geir Brash
+Altura: 1,73 m
+--
+
+Placa 2ID2L0K
+Marca: Honda
+Cor: Dourada
+Proprietário: Blair Wei
+Altura: 1,91 m
+--
+
+Placa M6I0LRY
+Marca: Honda
+Cor: Petróleo
+Proprietário: Megan Angelov
+Altura: 1,88 m
+--
+
+Placa 03D7HCJ
+Marca: Honda
+Cor: Prata
+Proprietário: Michael Caceres
+Altura: 1,91 m
+--
+
+Placa 3BMO8OZ
+Marca: Honda
+Cor: Laranja
+Proprietário: Krista Coci
+Altura: 1,7 m
+--
+
+Placa QX9N39M
+Marca: Honda
+Cor: Preta
+Proprietário: Ronald Veiga
+Altura: 1,65 m
+--
+
+Placa 195RS2U
+Marca: Honda
+Cor: Amarela
+Proprietário: Abouhalima Uptagrafft
+Altura: 1,63 m
+--
+
+Placa K38L65K
+Marca: Honda
+Cor: Azul
+Proprietário: Dimitri Kim
+Altura: 1,8 m
+--
+
+Placa DXORSFU
+Marca: Honda
+Cor: Dourada
+Proprietário: Tina Ipsen
+Altura: 1,6 m
+--
+
+Placa 6GPYOR7
+Marca: Honda
+Cor: Amarela
+Proprietário: Martino Mayer
+Altura: 1,88 m
+--
+
+Placa WLI39H0
+Marca: Honda
+Cor: Branca
+Proprietário: Sayed Savitskaya
+Altura: 1,75 m
+--
+
+Placa 0EOWIH2
+Marca: Honda
+Cor: Rosa
+Proprietário: Yoo Miller
+Altura: 1,88 m
+--
+
+Placa 9YQWZ7O
+Marca: Honda
+Cor: Verde
+Proprietário: Yuliya Furukawa
+Altura: 1,68 m
+--
+
+Placa XBRHZ7O
+Marca: Honda
+Cor: Laranja
+Proprietário: Dmytro Arms
+Altura: 1,58 m
+--
+
+Placa DWA1IIT
+Marca: Honda
+Cor: Vermelho
+Proprietário: Leonardo Ghebresilasie
+Altura: 1,55 m
+--
+
+Placa 90RR74O
+Marca: Honda
+Cor: Dourada
+Proprietário: Artur Truppa
+Altura: 1,68 m
+--
+
+Placa DH6LULR
+Marca: Honda
+Cor: Vermelho
+Proprietário: Saulius Sinnig
+Altura: 1,75 m
+--
+
+Placa FF6QR6A
+Marca: Honda
+Cor: Azul
+Proprietário: Kurt Fayez
+Altura: 1,58 m
+--
+
+Placa M6U8CR9
+Marca: Honda
+Cor: Amarela
+Proprietário: Nguyen Ozolina-Kovala
+Altura: 1,53 m
+--
+
+Placa SQ8Z6O4
+Marca: Honda
+Cor: Preta
+Proprietário: Maria Emmons
+Altura: 1,86 m
+--
+
+Placa A33H4HC
+Marca: Honda
+Cor: Petróleo
+Proprietário: Khetag Wagner
+Altura: 1,93 m
+--
+
+Placa ZB2X75V
+Marca: Honda
+Cor: Laranja
+Proprietário: Aneta Cardoso
+Altura: 1,88 m
+--
+
+Placa ZOI4DTW
+Marca: Honda
+Cor: Azul
+Proprietário: Levan Ingram
+Altura: 1,8 m
+--
+
+Placa K1OU3X8
+Marca: Honda
+Cor: Dourada
+Proprietário: Yasunari Inzikuru
+Altura: 1,83 m
+--
+
+Placa AN1V84V
+Marca: Honda
+Cor: Branca
+Proprietário: Hyunsung Ivancsik
+Altura: 1,68 m
+--
+
+Placa 7ND5UNM
+Marca: Honda
+Cor: Preta
+Proprietário: Camille Gao
+Altura: 1,75 m
+--
+
+Placa OL1S71K
+Marca: Honda
+Cor: Prata
+Proprietário: Mark Turner
+Altura: 1,6 m
+--
+
+Placa VQCNQ4K
+Marca: Honda
+Cor: Dourada
+Proprietário: Crispin Terraza
+Altura: 1,93 m
+--
+
+Placa CMZBTAI
+Marca: Honda
+Cor: Petróleo
+Proprietário: Silviya Cesarini
+Altura: 1,86 m
+--
+
+Placa AMX81V8
+Marca: Honda
+Cor: Preta
+Proprietário: Nahla Zhedik
+Altura: 1,58 m
+--
+
+Placa 3NFR5GQ
+Marca: Honda
+Cor: Laranja
+Proprietário: Alvaro Xu
+Altura: 1,73 m
+--
+
+Placa T6EER3Y
+Marca: Honda
+Cor: Rosa
+Proprietário: Revaz Melfort
+Altura: 1,65 m
+--
+
+Placa L337QE9
+Marca: Honda
+Cor: Azul
+Proprietário: Erika Owens
+Altura: 1,96 m
+--
+
+Placa CQQ9BIT
+Marca: Honda
+Cor: Azul
+Proprietário: Martyna Kirkbride
+Altura: 1,91 m
+--
+
+Placa 68CVHT5
+Marca: Honda
+Cor: Azul
+Proprietário: Emily Chow
+Altura: 1,7 m
+--
+
+Placa 45A4GXB
+Marca: Honda
+Cor: Rosa
+Proprietário: Ieuan Zbogar
+Altura: 1,86 m
+--
+
+Placa EKQC5YB
+Marca: Honda
+Cor: Branca
+Proprietário: Liam Ahmed
+Altura: 1,63 m
+--
+
+Placa KFQHMVH
+Marca: Honda
+Cor: Azul
+Proprietário: Lubomir Frank
+Altura: 1,91 m
+--
+
+Placa J7V5X4E
+Marca: Honda
+Cor: Vermelho
+Proprietário: Morgan Akkar
+Altura: 1,58 m
+--
+
+Placa LCR6VHO
+Marca: Honda
+Cor: Vermelho
+Proprietário: Andrey Osipova
+Altura: 1,8 m
+--
+
+Placa 4U36S1N
+Marca: Honda
+Cor: Vermelho
+Proprietário: Igor Turner
+Altura: 1,73 m
+--
+
+Placa L3YH5Q3
+Marca: Honda
+Cor: Dourada
+Proprietário: Sviatlana Yin
+Altura: 1,78 m
+--
+
+Placa LOKVQG5
+Marca: Honda
+Cor: Preta
+Proprietário: Christophe Radu
+Altura: 1,6 m
+--
+
+Placa XX78AVB
+Marca: Honda
+Cor: Verde
+Proprietário: Jan-Di Ilias
+Altura: 1,93 m
+--
+
+Placa AW50VL9
+Marca: Honda
+Cor: Branca
+Proprietário: Fionnuala Sameshima
+Altura: 1,6 m
+--
+
+Placa JPOI6R7
+Marca: Honda
+Cor: Petróleo
+Proprietário: Aliaksandr Ovinou
+Altura: 1,78 m
+--
+
+Placa C4ZLE28
+Marca: Honda
+Cor: Petróleo
+Proprietário: Serhiy Kang
+Altura: 1,78 m
+--
+
+Placa O2BRU69
+Marca: Honda
+Cor: Laranja
+Proprietário: Neymar Kaczor
+Altura: 1,65 m
+--
+
+Placa 05J0WK1
+Marca: Honda
+Cor: Amarela
+Proprietário: Methkal Grabich
+Altura: 1,53 m
+--
+
+Placa XVORPVZ
+Marca: Honda
+Cor: Dourada
+Proprietário: Njisane Saleh
+Altura: 1,63 m
+--
+
+Placa 34RT3HI
+Marca: Honda
+Cor: Branca
+Proprietário: Anthony Kudlicka
+Altura: 1,88 m
+--
+
+Placa 92OVPDW
+Marca: Honda
+Cor: Prata
+Proprietário: Lisa Peralta
+Altura: 1,83 m
+--
+
+Placa 1H8BOCF
+Marca: Honda
+Cor: Amarela
+Proprietário: Diego Stojic
+Altura: 1,86 m
+--
+
+Placa J8HLPRL
+Marca: Honda
+Cor: Vermelho
+Proprietário: Tatjana Henriquez
+Altura: 1,65 m
+--
+
+Placa UOJ9T65
+Marca: Honda
+Cor: Preta
+Proprietário: Sebastian Marcala-Nummela
+Altura: 1,53 m
+--
+
+Placa ZLET1A1
+Marca: Honda
+Cor: Rosa
+Proprietário: Huajun Oates
+Altura: 1,65 m
+--
+
+Placa K9UBOJ1
+Marca: Honda
+Cor: Preta
+Proprietário: Irakli Dinu
+Altura: 1,7 m
+--
+
+Placa XEBN7AX
+Marca: Honda
+Cor: Branca
+Proprietário: Masashi Angilella
+Altura: 1,93 m
+--
+
+Placa XVJPR58
+Marca: Honda
+Cor: Preta
+Proprietário: Honami Kozhenkova
+Altura: 1,68 m
+--
+
+Placa WZFW1Z0
+Marca: Honda
+Cor: Amarela
+Proprietário: Automne Driel
+Altura: 1,8 m
+--
+
+Placa 3A83HNO
+Marca: Honda
+Cor: Rosa
+Proprietário: Anastasia Gal
+Altura: 1,7 m
+--
+
+Placa RHFXPCN
+Marca: Honda
+Cor: Prata
+Proprietário: Abdihakem Jongjit
+Altura: 1,93 m
+--
+
+Placa QZMWMSJ
+Marca: Honda
+Cor: Dourada
+Proprietário: Dorian Sankuru
+Altura: 1,65 m
+--
+
+Placa U23MVNY
+Marca: Honda
+Cor: Rosa
+Proprietário: Jessica Lee
+Altura: 1,93 m
+--
+
+Placa N5NPSCZ
+Marca: Honda
+Cor: Branca
+Proprietário: Katharina Bartonickova
+Altura: 1,55 m
+--
+
+Placa TUDV33V
+Marca: Honda
+Cor: Verde
+Proprietário: Anne Grishaeva
+Altura: 1,63 m
+--
+
+Placa 6GONOJY
+Marca: Honda
+Cor: Azul
+Proprietário: Paul Almeida
+Altura: 1,58 m
+--
+
+Placa LXPRA27
+Marca: Honda
+Cor: Petróleo
+Proprietário: Stepan Vecchi
+Altura: 1,8 m
+--
+
+Placa Y3TENQQ
+Marca: Honda
+Cor: Amarela
+Proprietário: Odile Green
+Altura: 1,58 m
+--
+
+Placa 31AP6U5
+Marca: Honda
+Cor: Verde
+Proprietário: Noor Borzakovskiy
+Altura: 1,8 m
+--
+
+Placa 1V3K5Z0
+Marca: Honda
+Cor: Verde
+Proprietário: Chia Hilario
+Altura: 1,78 m
+--
+
+Placa 9FY6G9C
+Marca: Honda
+Cor: Verde
+Proprietário: Todor Hernandez
+Altura: 1,7 m
+--
+
+Placa OEUYCP7
+Marca: Honda
+Cor: Preta
+Proprietário: Pierre-Alexis Valiyev
+Altura: 1,86 m
+--
+
+Placa A2W1N2Y
+Marca: Honda
+Cor: Amarela
+Proprietário: Trevor Peno
+Altura: 1,58 m
+--
+
+Placa IZMNYJY
+Marca: Honda
+Cor: Verde
+Proprietário: Darvis Vogt
+Altura: 1,68 m
+--
+
+Placa C8TJEII
+Marca: Honda
+Cor: Prata
+Proprietário: Ndiatte Brown
+Altura: 1,75 m
+--
+
+Placa JB8AXH5
+Marca: Honda
+Cor: Laranja
+Proprietário: Annette Ouechtati
+Altura: 1,53 m
+--
+
+Placa T46S1O8
+Marca: Honda
+Cor: Azul
+Proprietário: Pape Kantarci
+Altura: 1,86 m
+--
+
+Placa FFRM7XI
+Marca: Honda
+Cor: Azul
+Proprietário: Chris Keller
+Altura: 1,58 m
+--
+
+Placa C3UXIVP
+Marca: Honda
+Cor: Dourada
+Proprietário: Dmitriy Montano
+Altura: 1,78 m
+--
+
+Placa B81KHOF
+Marca: Honda
+Cor: Petróleo
+Proprietário: Evgeniya Maneva
+Altura: 1,93 m
+--
+
+Placa Q8Z7ZJO
+Marca: Honda
+Cor: Rosa
+Proprietário: Christen Gonzalez
+Altura: 1,91 m
+--
+
+Placa WI73RTM
+Marca: Honda
+Cor: Verde
+Proprietário: Saskia Pliev
+Altura: 1,78 m
+--
+
+Placa 0EQOI3G
+Marca: Honda
+Cor: Verde
+Proprietário: Siham SCHIMAK
+Altura: 1,93 m
+--
+
+Placa 2DWSYO6
+Marca: Honda
+Cor: Prata
+Proprietário: Jere Guidea
+Altura: 1,73 m
+--
+
+Placa 05D8H3O
+Marca: Honda
+Cor: Amarela
+Proprietário: Elania Rodionova
+Altura: 1,6 m
+--
+
+Placa Z16CGKH
+Marca: Honda
+Cor: Petróleo
+Proprietário: Charline Chen
+Altura: 1,8 m
+--
+
+Placa 4KH0BWW
+Marca: Honda
+Cor: Verde
+Proprietário: Leire Saltanovic
+Altura: 1,93 m
+--
+
+Placa ECVK9N7
+Marca: Honda
+Cor: Rosa
+Proprietário: Bubmin Saenz
+Altura: 1,86 m
+--
+
+Placa 98N67DL
+Marca: Honda
+Cor: Rosa
+Proprietário: Luigi Marshall
+Altura: 1,53 m
+--
+
+Placa U9X17L8
+Marca: Honda
+Cor: Vermelho
+Proprietário: Madonna Kim
+Altura: 1,93 m
+--
+
+Placa Q1GA3ZX
+Marca: Honda
+Cor: Vermelho
+Proprietário: Wanida Barjaktarovic
+Altura: 1,78 m
+--
+
+Placa LL3PX37
+Marca: Honda
+Cor: Dourada
+Proprietário: Lianne Schuring
+Altura: 1,68 m
+--
+
+Placa WV7X5J9
+Marca: Honda
+Cor: Rosa
+Proprietário: Viktor Michshuk
+Altura: 1,75 m
+--
+
+Placa 90FPL8X
+Marca: Honda
+Cor: Laranja
+Proprietário: Yasunari Jokovic
+Altura: 1,53 m
+--
+
+Placa VMWXMFU
+Marca: Honda
+Cor: Amarela
+Proprietário: Pawel Jensen
+Altura: 1,78 m
+--
+
+Placa 63FS2YX
+Marca: Honda
+Cor: Laranja
+Proprietário: Dmitriy Liang
+Altura: 1,88 m
+--
+
+Placa K9UK1GY
+Marca: Honda
+Cor: Dourada
+Proprietário: Niclas Tymoshchenko
+Altura: 1,58 m
+--
+
+Placa NEEIFKR
+Marca: Honda
+Cor: Laranja
+Proprietário: Jacobine Fowles
+Altura: 1,68 m
+--
+
+Placa BTP4E83
+Marca: Honda
+Cor: Prata
+Proprietário: Stephanie Chebbi
+Altura: 1,68 m
+--
+
+Placa WUFF58I
+Marca: Honda
+Cor: Petróleo
+Proprietário: David Rahimi
+Altura: 1,78 m
+--
+
+Placa DLWWIR8
+Marca: Honda
+Cor: Laranja
+Proprietário: Kiril Larsson
+Altura: 1,68 m
+--
+
+Placa CPI8VAJ
+Marca: Honda
+Cor: Rosa
+Proprietário: Nicholas Warlow
+Altura: 1,8 m
+--
+
+Placa 7UV9X0P
+Marca: Honda
+Cor: Rosa
+Proprietário: Almensh Zbogar
+Altura: 1,65 m
+--
+
+Placa RLUC9VG
+Marca: Honda
+Cor: Azul
+Proprietário: Muller Nikcevic
+Altura: 1,8 m
+--
+
+Placa 8F69PEP
+Marca: Honda
+Cor: Branca
+Proprietário: Bianca Sekyrova
+Altura: 1,88 m
+--
+
+Placa QS22UFB
+Marca: Honda
+Cor: Branca
+Proprietário: Prince Zyl
+Altura: 1,88 m
+--
+
+Placa FGZ28O0
+Marca: Honda
+Cor: Rosa
+Proprietário: Caroline Kirdyapkina
+Altura: 1,93 m
+--
+
+Placa RSNHO4R
+Marca: Honda
+Cor: Dourada
+Proprietário: Lukas Gong
+Altura: 1,73 m
+--
+
+Placa HZUX6TT
+Marca: Honda
+Cor: Rosa
+Proprietário: Gilles Zhang
+Altura: 1,8 m
+--
+
+Placa 3M4HCFM
+Marca: Honda
+Cor: Amarela
+Proprietário: Marcelien Hosnyanszky
+Altura: 1,75 m
+--
+
+Placa OFMJHOS
+Marca: Honda
+Cor: Vermelho
+Proprietário: Sergey Vasilionak
+Altura: 1,83 m
+--
+
+Placa DT8SKQ3
+Marca: Honda
+Cor: Prata
+Proprietário: Kim Estrada
+Altura: 1,83 m
+--
+
+Placa TK5M34H
+Marca: Honda
+Cor: Dourada
+Proprietário: Laura Wu
+Altura: 1,73 m
+--
+
+Placa 0BCW8P0
+Marca: Honda
+Cor: Branca
+Proprietário: le Toksoy
+Altura: 1,63 m
+--
+
+Placa X4UQ2ON
+Marca: Honda
+Cor: Azul
+Proprietário: Tiff Fehr
+Altura: 1,63 m
+--
+
+Placa LOXZMA9
+Marca: Honda
+Cor: Laranja
+Proprietário: Ava Silva
+Altura: 1,58 m
+--
+
+Placa QMR9G0F
+Marca: Honda
+Cor: Vermelho
+Proprietário: Kamil Kintzer
+Altura: 1,53 m
+--
+
+Placa DLODUXD
+Marca: Honda
+Cor: Preta
+Proprietário: Maryam Allen
+Altura: 1,88 m
+--
+
+Placa RWTO749
+Marca: Honda
+Cor: Preta
+Proprietário: Ian Rhodes
+Altura: 1,91 m
+--
+
+Placa O6SYPVM
+Marca: Honda
+Cor: Laranja
+Proprietário: Melaine Souleymane
+Altura: 1,6 m
+--
+
+Placa BFWWUNO
+Marca: Honda
+Cor: Preta
+Proprietário: Natalia Kim
+Altura: 1,68 m
+--
+
+Placa O6S9GZK
+Marca: Honda
+Cor: Vermelho
+Proprietário: Belal Wang
+Altura: 1,86 m
+--
+
+Placa XUC2VZ6
+Marca: Honda
+Cor: Azul
+Proprietário: Brent Queen
+Altura: 1,7 m
+--
+
+Placa HMI44Q1
+Marca: Honda
+Cor: Prata
+Proprietário: Fabienne Horvat-Panda
+Altura: 1,88 m
+--
+
+Placa O5EPHK2
+Marca: Honda
+Cor: Azul
+Proprietário: Hagos Kempas
+Altura: 1,65 m
+--
+
+Placa DQ8X9DP
+Marca: Honda
+Cor: Prata
+Proprietário: Nicolas Rapinoe
+Altura: 1,68 m
+--
+
+Placa RKZHFQ5
+Marca: Honda
+Cor: Petróleo
+Proprietário: Hyeonwoo Rolin
+Altura: 1,8 m
+--
+
+Placa YFRBAE7
+Marca: Honda
+Cor: Rosa
+Proprietário: Wenling Aguiar
+Altura: 1,55 m
+--
+
+Placa T4YA4M4
+Marca: Honda
+Cor: Preta
+Proprietário: Enzo Balciunas
+Altura: 1,53 m
+--
+
+Placa 6GBK62G
+Marca: Honda
+Cor: Azul
+Proprietário: Ruta Trowbridge
+Altura: 1,73 m
+--
+
+Placa LMN1EJN
+Marca: Honda
+Cor: Branca
+Proprietário: Haakan Okrame
+Altura: 1,68 m
+--
+
+Placa 2GTMCPJ
+Marca: Honda
+Cor: Branca
+Proprietário: Benjamin Kuramagomedov
+Altura: 1,73 m
+--
+
+Placa OEZGL21
+Marca: Honda
+Cor: Preta
+Proprietário: Urs Kim
+Altura: 1,83 m
+--
+
+Placa YCTPFGR
+Marca: Honda
+Cor: Dourada
+Proprietário: Morgan Najah
+Altura: 1,63 m
+--
+
+Placa Q2V0JVK
+Marca: Honda
+Cor: Branca
+Proprietário: Nathan Barnhart
+Altura: 1,53 m
+--
+
+Placa O65J5TO
+Marca: Honda
+Cor: Laranja
+Proprietário: Grigoriy Zhang
+Altura: 1,7 m
+--
+
+Placa NI2NBDA
+Marca: Honda
+Cor: Amarela
+Proprietário: Dana Potent
+Altura: 1,91 m
+--
+
+Placa L337539
+Marca: Honda
+Cor: Azul
+Proprietário: Aron Pilhofer
+Altura: 1,6 m
+--
+
+Placa 08G6DXU
+Marca: Honda
+Cor: Verde
+Proprietário: Benjamin Jeong
+Altura: 1,83 m
+--
+
+Placa CPYKOHM
+Marca: Honda
+Cor: Azul
+Proprietário: Dagmara Balla
+Altura: 1,6 m
+--
+
+Placa L7FAK0D
+Marca: Honda
+Cor: Vermelho
+Proprietário: Jack Shafar
+Altura: 1,83 m
+--
+
+Placa 74KH6YS
+Marca: Honda
+Cor: Vermelho
+Proprietário: Martin Kergyte
+Altura: 1,8 m
+--
+
+Placa 6FKLW1V
+Marca: Honda
+Cor: Amarela
+Proprietário: Marcia Amri
+Altura: 1,53 m
+--
+
+Placa PFM4KX8
+Marca: Honda
+Cor: Amarela
+Proprietário: Virgil Neny
+Altura: 1,63 m
+--
+
+Placa QV7T7HH
+Marca: Honda
+Cor: Dourada
+Proprietário: Allan Liu
+Altura: 1,55 m
+--
+
+Placa GZM4HBV
+Marca: Honda
+Cor: Branca
+Proprietário: Nocawe Zolnerovics
+Altura: 1,75 m
+--
+
+Placa SJ7V5J3
+Marca: Honda
+Cor: Azul
+Proprietário: Maria Figlioli
+Altura: 1,78 m
+--
+
+Placa H8FRHXV
+Marca: Honda
+Cor: Branca
+Proprietário: Baorong Mir
+Altura: 1,7 m
+--
+
+Placa W2G08O9
+Marca: Honda
+Cor: Branca
+Proprietário: Kyung Kaifuchi
+Altura: 1,93 m
+--
+
+Placa 0K1RLWP
+Marca: Honda
+Cor: Preta
+Proprietário: Jan Merzougui
+Altura: 1,53 m
+--
+
+Placa GZPOZB1
+Marca: Honda
+Cor: Amarela
+Proprietário: Vincent Cogdell
+Altura: 1,63 m
+--
+
+Placa AT9GYRJ
+Marca: Honda
+Cor: Branca
+Proprietário: Tom Dvorsak
+Altura: 1,63 m
+--
+
+Placa Z0AJF20
+Marca: Honda
+Cor: Vermelho
+Proprietário: Maria Morgan
+Altura: 1,8 m
+--
+
+Placa GY13NEP
+Marca: Honda
+Cor: Azul
+Proprietário: Sholpan Draudvila
+Altura: 1,6 m
+--
+
+Placa YQ8NWQS
+Marca: Honda
+Cor: Prata
+Proprietário: Miguel Skujyte
+Altura: 1,93 m
+--
+
+Placa YFPC7MA
+Marca: Honda
+Cor: Laranja
+Proprietário: Illse Mylonakis
+Altura: 1,75 m
+--
+
+Placa 1JXN65Y
+Marca: Honda
+Cor: Prata
+Proprietário: Patricia Scott
+Altura: 1,8 m
+--
+
+Placa XQQT198
+Marca: Honda
+Cor: Amarela
+Proprietário: Irina Liu
+Altura: 1,73 m
+--
+
+Placa ZA3GETQ
+Marca: Honda
+Cor: Vermelho
+Proprietário: Todd Kuzmenok
+Altura: 1,91 m
+--
+
+Placa XYV2MEC
+Marca: Honda
+Cor: Branca
+Proprietário: Maja Balykina
+Altura: 1,53 m
+--
+
+Placa PHUT36Z
+Marca: Honda
+Cor: Petróleo
+Proprietário: Lindsay Guenot
+Altura: 1,65 m
+--
+
+Placa 5D0T3L7
+Marca: Honda
+Cor: Azul
+Proprietário: Shane Wu
+Altura: 1,73 m
+--
+
+Placa V6821N8
+Marca: Honda
+Cor: Amarela
+Proprietário: Beth Moorwood
+Altura: 1,73 m
+--
+
+Placa 9KGIN44
+Marca: Honda
+Cor: Rosa
+Proprietário: Farrah Sdiri
+Altura: 1,6 m
+--
+
+Placa 2CT7FLT
+Marca: Honda
+Cor: Laranja
+Proprietário: Cesar Joppich
+Altura: 1,53 m
+--
+
+Placa 5FPI9CW
+Marca: Honda
+Cor: Dourada
+Proprietário: Jarmila Hallgrimsson
+Altura: 1,73 m
+--
+
+Placa VLWO19S
+Marca: Honda
+Cor: Prata
+Proprietário: Khamis Angeloni
+Altura: 1,65 m
+--
+
+Placa 9C0BMIH
+Marca: Honda
+Cor: Rosa
+Proprietário: Bohdan Kuhnle
+Altura: 1,6 m
+--
+
+Placa SMGEWGB
+Marca: Honda
+Cor: Azul
+Proprietário: Ivan Abdusalomov
+Altura: 1,58 m
+--
+
+Placa NSZ7YY4
+Marca: Honda
+Cor: Verde
+Proprietário: Stacey Frolov
+Altura: 1,91 m
+--
+
+Placa F6MAW8J
+Marca: Honda
+Cor: Prata
+Proprietário: Pascal Davaasukh
+Altura: 1,86 m
+--
+
+Placa HUWGX8O
+Marca: Honda
+Cor: Laranja
+Proprietário: Alexandre Sawers
+Altura: 1,7 m
+--
+
+Placa J70N9SA
+Marca: Honda
+Cor: Petróleo
+Proprietário: Fabio Simic
+Altura: 1,88 m
+--
+
+Placa 6ZSJTK1
+Marca: Honda
+Cor: Prata
+Proprietário: Satomi Xian
+Altura: 1,8 m
+--
+
+Placa ICSPMC5
+Marca: Honda
+Cor: Vermelho
+Proprietário: Ken Roland
+Altura: 1,7 m
+--
+
+Placa 4WFGM2M
+Marca: Honda
+Cor: Rosa
+Proprietário: Gediminas Whitehurst
+Altura: 1,53 m
+--
+
+Placa IG2ZQ6F
+Marca: Honda
+Cor: Laranja
+Proprietário: Delfina Lindfors
+Altura: 1,53 m
+--
+
+Placa HV4BNNH
+Marca: Honda
+Cor: Rosa
+Proprietário: Sergio Calzada
+Altura: 1,73 m
+--
+
+Placa BVQ4FCB
+Marca: Honda
+Cor: Petróleo
+Proprietário: Janice Glasnovic
+Altura: 1,65 m
+--
+
+Placa UO7ERGV
+Marca: Honda
+Cor: Amarela
+Proprietário: Marcin Dyen
+Altura: 1,93 m
+--
+
+Placa PPJW4G4
+Marca: Honda
+Cor: Prata
+Proprietário: Amelie Svensson
+Altura: 1,93 m
+--
+
+Placa RWM24Z6
+Marca: Honda
+Cor: Azul
+Proprietário: Madias Jeffery
+Altura: 1,53 m
+--
+
+Placa S305CYB
+Marca: Honda
+Cor: Dourada
+Proprietário: David Svarc
+Altura: 1,6 m
+--
+
+Placa RQEDXRL
+Marca: Honda
+Cor: Azul
+Proprietário: Phillipp Al-Mashhadani
+Altura: 1,6 m
+--
+
+Placa 6IVL7DH
+Marca: Honda
+Cor: Vermelho
+Proprietário: Azad Honeybone
+Altura: 1,73 m
+--
+
+Placa 5I8MIS1
+Marca: Honda
+Cor: Rosa
+Proprietário: Mostafa Kleen
+Altura: 1,65 m
+--
+
+Placa PGYUOIV
+Marca: Honda
+Cor: Rosa
+Proprietário: Nick Burrows
+Altura: 1,68 m
+--
+
+Placa DZ36WRE
+Marca: Honda
+Cor: Petróleo
+Proprietário: Nicholas Ihle
+Altura: 1,58 m
+--
+
+Placa DXGC5YE
+Marca: Honda
+Cor: Preta
+Proprietário: Natthanan Caluag
+Altura: 1,55 m
+--
+
+Placa IHTL2WD
+Marca: Honda
+Cor: Amarela
+Proprietário: Kasper You
+Altura: 1,53 m
+--
+
+Placa GR1Y3YX
+Marca: Honda
+Cor: Prata
+Proprietário: Justine Lavrentyev
+Altura: 1,78 m
+--
+
+Placa BRR3RSI
+Marca: Honda
+Cor: Prata
+Proprietário: Joshua Grechishnikova
+Altura: 1,6 m
+--
+
+Placa G8LU48U
+Marca: Honda
+Cor: Rosa
+Proprietário: Ligia Czakova
+Altura: 1,83 m
+--
+
+Placa C8J5CIF
+Marca: Honda
+Cor: Preta
+Proprietário: Yun-Hee Karagoz
+Altura: 1,8 m
+--
+
+Placa L337369
+Marca: Honda
+Cor: Azul
+Proprietário: Heather Billings
+Altura: 1,58 m
+--
+
+Placa 6PH8UW0
+Marca: Honda
+Cor: Prata
+Proprietário: Donglun Nhlapo
+Altura: 1,78 m
+--
+
+Placa CWNS81S
+Marca: Honda
+Cor: Petróleo
+Proprietário: Peter Howieson
+Altura: 1,93 m
+--
+
+Placa N187F4R
+Marca: Honda
+Cor: Amarela
+Proprietário: Derek Dancette
+Altura: 1,8 m
+--
+
+Placa RFUXIV1
+Marca: Honda
+Cor: Petróleo
+Proprietário: Saralee Wilson
+Altura: 1,83 m
+--
+
+Placa IKO4ZET
+Marca: Honda
+Cor: Branca
+Proprietário: Suji Labani
+Altura: 1,78 m
+--
+
+Placa 63NCG0U
+Marca: Honda
+Cor: Azul
+Proprietário: Alberto Pedersen
+Altura: 1,93 m
+--
+
+Placa L337DV9
+Marca: Honda
+Cor: Azul
+Proprietário: Joe Germuska
+Altura: 1,88 m
+--
+
+Placa 4XPMDTN
+Marca: Honda
+Cor: Vermelho
+Proprietário: Anqi Hernandez
+Altura: 1,7 m
+--
+
+Placa RAFNL3C
+Marca: Honda
+Cor: Preta
+Proprietário: Johnno Listopadova
+Altura: 1,8 m
+--
+
+Placa FFSN25R
+Marca: Honda
+Cor: Rosa
+Proprietário: David Jr
+Altura: 1,73 m
+--
+
+Placa I57YW77
+Marca: Honda
+Cor: Preta
+Proprietário: Marleen Rodrigues
+Altura: 1,8 m
+--
+
+Placa UHFXI5X
+Marca: Honda
+Cor: Rosa
+Proprietário: Krista Dai
+Altura: 1,88 m
+--
+
+Placa A2KQ1MU
+Marca: Honda
+Cor: Branca
+Proprietário: Sinta Denisov
+Altura: 1,86 m
+--
+
+Placa K0LDDGB
+Marca: Honda
+Cor: Verde
+Proprietário: Jeff Larson
+Altura: 1,96 m
+--
+
+Placa V2ECTE7
+Marca: Honda
+Cor: Verde
+Proprietário: Younggwon Fabre
+Altura: 1,73 m
+--
+
+Placa RPUVTA0
+Marca: Honda
+Cor: Rosa
+Proprietário: Ross Nakamura
+Altura: 1,55 m
+--
+
+Placa VO956PD
+Marca: Honda
+Cor: Branca
+Proprietário: Ciaran Susanu
+Altura: 1,91 m
+--
+
+Placa S2S3SVO
+Marca: Honda
+Cor: Dourada
+Proprietário: Stephanie O`regan
+Altura: 1,86 m
+--
+
+Placa 67UP59B
+Marca: Honda
+Cor: Vermelho
+Proprietário: Iain Hartig
+Altura: 1,7 m
+--
+
+Placa H0CS4NM
+Marca: Honda
+Cor: Branca
+Proprietário: Kenneth Howden
+Altura: 1,63 m
+--
+
+Placa X059MKH
+Marca: Honda
+Cor: Azul
+Proprietário: Jill Magdy
+Altura: 1,63 m
+--
+
+Placa KQNOM79
+Marca: Honda
+Cor: Vermelho
+Proprietário: Grzegorz Tipsarevic
+Altura: 1,88 m
+--
+
+Placa PS27G5Q
+Marca: Honda
+Cor: Vermelho
+Proprietário: James Santoso
+Altura: 1,86 m
+--
+
+Placa NEFR0CN
+Marca: Honda
+Cor: Branca
+Proprietário: Bebey Adamski
+Altura: 1,6 m
+--
+
+Placa KTKZVU4
+Marca: Honda
+Cor: Branca
+Proprietário: Serghei Alhasan
+Altura: 1,78 m
+--
+
+Placa DLZI42E
+Marca: Honda
+Cor: Branca
+Proprietário: Nathan Freixa
+Altura: 1,73 m
+--
+
+Placa 4BXW9BJ
+Marca: Honda
+Cor: Preta
+Proprietário: Glenn Gonzalez
+Altura: 1,91 m
+--
+
+Placa V3KNL9A
+Marca: Honda
+Cor: Rosa
+Proprietário: Ibrahim Oie
+Altura: 1,53 m
+--
+
+Placa AP9CQTW
+Marca: Honda
+Cor: Vermelho
+Proprietário: Christine Bonk
+Altura: 1,93 m
+--
+
+Placa TQAG10Y
+Marca: Honda
+Cor: Laranja
+Proprietário: Youngran Inthavong
+Altura: 1,68 m
+--
+
+Placa PLWYR6M
+Marca: Honda
+Cor: Prata
+Proprietário: Ken Eom
+Altura: 1,8 m
+--
+
+Placa IGQZ39N
+Marca: Honda
+Cor: Laranja
+Proprietário: Hamdan Zabelinskaya
+Altura: 1,91 m
+--
+
+Placa XQNPFTF
+Marca: Honda
+Cor: Dourada
+Proprietário: Pavlos Nicolas
+Altura: 1,73 m
+--
+
+Placa JXZLPXY
+Marca: Honda
+Cor: Branca
+Proprietário: Grzegorz Kohistani
+Altura: 1,73 m
+--
+
+Placa THJF682
+Marca: Honda
+Cor: Laranja
+Proprietário: Hae-Ran Garcia
+Altura: 1,55 m
+--
+
+Placa O7LIG9I
+Marca: Honda
+Cor: Preta
+Proprietário: Alin Klaas
+Altura: 1,78 m
+--
+
+Placa IVLP2N8
+Marca: Honda
+Cor: Rosa
+Proprietário: Marta Kiala
+Altura: 1,58 m
+--
+
+Placa 9SQ42Y9
+Marca: Honda
+Cor: Amarela
+Proprietário: Rhys Faber
+Altura: 1,73 m
+--
+
+Placa PZ6Z32Z
+Marca: Honda
+Cor: Azul
+Proprietário: Adelinde Mangold
+Altura: 1,78 m
+--
+
+Placa LRZYB1T
+Marca: Honda
+Cor: Vermelho
+Proprietário: Ryan Welte
+Altura: 1,73 m
+--
+
+Placa E9B2CSB
+Marca: Honda
+Cor: Rosa
+Proprietário: Mohanad Raudaschl
+Altura: 1,91 m
+--
+
+Placa 6SMEAL0
+Marca: Honda
+Cor: Rosa
+Proprietário: Yuhan Simonet
+Altura: 1,8 m
+--
+
+Placa UC1NG2N
+Marca: Honda
+Cor: Azul
+Proprietário: Svenja Marennikova
+Altura: 1,6 m
+--
+
+Placa RC8BNM4
+Marca: Honda
+Cor: Vermelho
+Proprietário: Michal Krsmanovic
+Altura: 1,73 m
+--
+
+Placa 2Z85H7Q
+Marca: Honda
+Cor: Laranja
+Proprietário: Guan Cabrera
+Altura: 1,91 m
+--
+
+Placa JHKJE4A
+Marca: Honda
+Cor: Dourada
+Proprietário: Mclain Rakoczy
+Altura: 1,83 m
+--
+
+Placa AI75X6L
+Marca: Honda
+Cor: Preta
+Proprietário: Marcel Cainero
+Altura: 1,91 m
+--
+
+Placa 4R02S8A
+Marca: Honda
+Cor: Laranja
+Proprietário: Dani Loukas
+Altura: 1,68 m
+--
+
+Placa MH92AIZ
+Marca: Honda
+Cor: Amarela
+Proprietário: Jieun Sukhorukov
+Altura: 1,53 m
+--
+
+Placa AQR5RZU
+Marca: Honda
+Cor: Laranja
+Proprietário: Darcy Zouari
+Altura: 1,93 m
+--
+
+Placa YY8867Q
+Marca: Honda
+Cor: Dourada
+Proprietário: Gianluca Schmidt
+Altura: 1,55 m
+--
+
+Placa FVD29O1
+Marca: Honda
+Cor: Verde
+Proprietário: Lubov Begaj
+Altura: 1,8 m
+--
+
+Placa D81PNT0
+Marca: Honda
+Cor: Azul
+Proprietário: Marharyta Willmott
+Altura: 1,83 m
+--
+
+Placa W3B2SYH
+Marca: Honda
+Cor: Verde
+Proprietário: Kerri Decosse
+Altura: 1,68 m
+--
+
+Placa 5X5XZK1
+Marca: Honda
+Cor: Azul
+Proprietário: Moses Sihame
+Altura: 1,55 m
+--
+
+Placa 2VB75O9
+Marca: Honda
+Cor: Verde
+Proprietário: Pieter-Jan Huang
+Altura: 1,65 m
+--
+
+Placa QL48DE1
+Marca: Honda
+Cor: Amarela
+Proprietário: Maryna Tyler
+Altura: 1,75 m
+--
+
+Placa BE9WJYX
+Marca: Honda
+Cor: Dourada
+Proprietário: Gonzalo Pacheco
+Altura: 1,53 m
+--
+
+Placa 28XRG6U
+Marca: Honda
+Cor: Azul
+Proprietário: Petr Waterfield
+Altura: 1,58 m
+--
+
+Placa OWFMXT9
+Marca: Honda
+Cor: Azul
+Proprietário: Kelley Nurmagomedov
+Altura: 1,75 m
+--
+
+Placa VPTA7NV
+Marca: Honda
+Cor: Prata
+Proprietário: Triyaningsih Elkawiseh
+Altura: 1,86 m
+--
+
+Placa TGEH1NP
+Marca: Honda
+Cor: Prata
+Proprietário: Eloise Balooshi
+Altura: 1,78 m
+--
+
+Placa FRA5E6P
+Marca: Honda
+Cor: Amarela
+Proprietário: Toshiyuki Nyasango
+Altura: 1,7 m
+--
+
+Placa 1DOTBE7
+Marca: Honda
+Cor: Vermelho
+Proprietário: Russell Bicet
+Altura: 1,93 m
+--
+
+Placa S7OYWI8
+Marca: Honda
+Cor: Amarela
+Proprietário: Marco Sagmeister
+Altura: 1,86 m
+--
+
+Placa CTO2FZC
+Marca: Honda
+Cor: Amarela
+Proprietário: Artem Tops-Alexander
+Altura: 1,75 m
+--
+
+Placa L3375A9
+Marca: Honda
+Cor: Azul
+Proprietário: Jeremy Bowers
+Altura: 1,86 m
+--
+
+Placa FCQFDEH
+Marca: Honda
+Cor: Prata
+Proprietário: Kamilla Rietz
+Altura: 1,93 m
+--
+
+Placa SZX95D0
+Marca: Honda
+Cor: Petróleo
+Proprietário: Radoslaw Licona
+Altura: 1,83 m
+--
+
+Placa Y4ZXXBW
+Marca: Honda
+Cor: Laranja
+Proprietário: Lyndsie Dudas
+Altura: 1,86 m
+--
+
+Placa V30VAR4
+Marca: Honda
+Cor: Vermelho
+Proprietário: Franck Gemo
+Altura: 1,75 m
+--
+
+Placa QF0841F
+Marca: Honda
+Cor: Rosa
+Proprietário: Khairul Morningstar
+Altura: 1,93 m
+--
+
+Placa 0H6ZOEJ
+Marca: Honda
+Cor: Prata
+Proprietário: Benjamin Parker
+Altura: 1,73 m
+--
+
+Placa WX53MLK
+Marca: Honda
+Cor: Dourada
+Proprietário: Luis Petkovic
+Altura: 1,88 m
+--
+
+Placa KZPT3ID
+Marca: Honda
+Cor: Petróleo
+Proprietário: Astrida Roche
+Altura: 1,91 m
+--
+
+Placa I11EHT6
+Marca: Honda
+Cor: Dourada
+Proprietário: Inna Yu
+Altura: 1,88 m
+--
+
+Placa VJK4O32
+Marca: Honda
+Cor: Azul
+Proprietário: Darae Charlos
+Altura: 1,88 m
+--
+
+Placa 62MV0O2
+Marca: Honda
+Cor: Dourada
+Proprietário: Patrik Brown
+Altura: 1,63 m
+--
+
+Placa CLKEFH7
+Marca: Honda
+Cor: Azul
+Proprietário: Lynsey Bailey
+Altura: 1,55 m
+--
+
+Placa O8W7XG0
+Marca: Honda
+Cor: Vermelho
+Proprietário: Xiaoxia Yamagata
+Altura: 1,55 m
+--
+
+Placa JLVL905
+Marca: Honda
+Cor: Rosa
+Proprietário: Mohsen Pyatachenko
+Altura: 1,68 m
+--
+
+Placa 4XIANUJ
+Marca: Honda
+Cor: Preta
+Proprietário: Anderson Oh
+Altura: 1,91 m
+--
+
+Placa YOQ9O9O
+Marca: Honda
+Cor: Preta
+Proprietário: Jinhyeok Yamaguchi
+Altura: 1,65 m
+--
+
+Placa DY2Z7KV
+Marca: Honda
+Cor: Verde
+Proprietário: Nuno Rajabi
+Altura: 1,8 m
+--
+
+Placa 6YUY18T
+Marca: Honda
+Cor: Prata
+Proprietário: Vladimir Desravine
+Altura: 1,91 m
+--
+
+Placa ZUQTUSM
+Marca: Honda
+Cor: Laranja
+Proprietário: Zhiwen Piron
+Altura: 1,68 m
+--
+
+Placa EKLTQFW
+Marca: Honda
+Cor: Azul
+Proprietário: Byungchul Bouqantar
+Altura: 1,65 m
+--
+
+Placa L337WR9
+Marca: Honda
+Cor: Azul
+Proprietário: Jacqui Maher
+Altura: 1,88 m
+--
+
+Placa 5AF4SS9
+Marca: Honda
+Cor: Petróleo
+Proprietário: Teerawat Drouin
+Altura: 1,73 m
+--
+
+Placa BNSN48F
+Marca: Honda
+Cor: Vermelho
+Proprietário: Shugen Elkhedr
+Altura: 1,63 m
+--
+
+Placa LSLWT8H
+Marca: Honda
+Cor: Petróleo
+Proprietário: Caroline Denayer
+Altura: 1,7 m
+--
+
+Placa P8ECLQ3
+Marca: Honda
+Cor: Vermelho
+Proprietário: Tina Hristova
+Altura: 1,83 m
+--
+
+Placa BPW35BI
+Marca: Honda
+Cor: Amarela
+Proprietário: Fernanda Hall
+Altura: 1,63 m
+--
+
+Placa HJZBM70
+Marca: Honda
+Cor: Vermelho
+Proprietário: Nathan Zhang
+Altura: 1,91 m
+--
+
+Placa E3DVJXS
+Marca: Honda
+Cor: Laranja
+Proprietário: Renata Rasic
+Altura: 1,8 m
+--
+
+Placa 88DIKYT
+Marca: Honda
+Cor: Amarela
+Proprietário: Irada Velthooven
+Altura: 1,68 m
+--
+
+Placa AEK13UO
+Marca: Honda
+Cor: Vermelho
+Proprietário: Frank Awad
+Altura: 1,55 m
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep -A 3 -B 1 Honda automoveis
+Placa QOBSFKL
+Marca: Honda
+Cor: Azul
+Proprietário: Aurelie Kirkham
+Altura: 1,8 m
+--
+Placa Z4FCH97
+Marca: Honda
+Cor: Verde
+Proprietário: Christian Brata
+Altura: 1,93 m
+--
+Placa GGVB13U
+Marca: Honda
+Cor: Branca
+Proprietário: Erick Fedoriva
+Altura: 1,86 m
+--
+Placa ZRYI0P5
+Marca: Honda
+Cor: Verde
+Proprietário: Marianne Li
+Altura: 1,83 m
+--
+Placa OUM9U5D
+Marca: Honda
+Cor: Verde
+Proprietário: Emiliano Wenk
+Altura: 1,83 m
+--
+Placa WCXINOH
+Marca: Honda
+Cor: Dourada
+Proprietário: Hanna Huang
+Altura: 1,8 m
+--
+Placa S4YYXCA
+Marca: Honda
+Cor: Preta
+Proprietário: Catriona Mottram
+Altura: 1,91 m
+--
+Placa VLVLVE9
+Marca: Honda
+Cor: Branca
+Proprietário: Sun Brink
+Altura: 1,58 m
+--
+Placa L337ZR9
+Marca: Honda
+Cor: Vermelho
+Proprietário: Katie Park
+Altura: 1,88 m
+--
+Placa LJE7BAA
+Marca: Honda
+Cor: Laranja
+Proprietário: Jordan Voglsang
+Altura: 1,55 m
+--
+Placa 559DJPI
+Marca: Honda
+Cor: Branca
+Proprietário: Reza Scown
+Altura: 1,73 m
+--
+Placa YRBYSS5
+Marca: Honda
+Cor: Branca
+Proprietário: Severine Gibson
+Altura: 1,6 m
+--
+Placa N6D3RMF
+Marca: Honda
+Cor: Petróleo
+Proprietário: Vincent Darnel
+Altura: 1,88 m
+--
+Placa QQW9LAQ
+Marca: Honda
+Cor: Preta
+Proprietário: Lucas Bankier
+Altura: 1,8 m
+--
+Placa JQ4OWXH
+Marca: Honda
+Cor: Branca
+Proprietário: Artem Figere
+Altura: 1,86 m
+--
+Placa 4I8D0WO
+Marca: Honda
+Cor: Petróleo
+Proprietário: Brahim Wang
+Altura: 1,7 m
+--
+Placa 8BAFRKG
+Marca: Honda
+Cor: Petróleo
+Proprietário: Wouter Brennauer
+Altura: 1,55 m
+--
+Placa 7M841G6
+Marca: Honda
+Cor: Petróleo
+Proprietário: Matthew Lessard
+Altura: 1,7 m
+--
+Placa 7UNAZZC
+Marca: Honda
+Cor: Preta
+Proprietário: Richard Hybois
+Altura: 1,83 m
+--
+Placa L337P89
+Marca: Honda
+Cor: Petróleo
+Proprietário: Mike Bostock
+Altura: 1,93 m
+--
+Placa VAZS7KT
+Marca: Honda
+Cor: Verde
+Proprietário: Silvia Travica
+Altura: 1,63 m
+--
+Placa K58GVXT
+Marca: Honda
+Cor: Amarela
+Proprietário: Zach Esposito
+Altura: 1,7 m
+--
+Placa 2YLA2FC
+Marca: Honda
+Cor: Petróleo
+Proprietário: Huizi Accambray
+Altura: 1,86 m
+--
+Placa 7CHWJXE
+Marca: Honda
+Cor: Branca
+Proprietário: David Shvedova
+Altura: 1,63 m
+--
+Placa EL7J5EV
+Marca: Honda
+Cor: Vermelho
+Proprietário: Donatien Otoshi
+Altura: 1,63 m
+--
+Placa KCKGOH3
+Marca: Honda
+Cor: Azul
+Proprietário: Vladislava Tichelt
+Altura: 1,7 m
+--
+Placa E8XPHFK
+Marca: Honda
+Cor: Preta
+Proprietário: Abiodun Horvath
+Altura: 1,91 m
+--
+Placa G2PAOMN
+Marca: Honda
+Cor: Amarela
+Proprietário: Eva-Maria Speirs
+Altura: 1,55 m
+--
+Placa F2B8HKX
+Marca: Honda
+Cor: Preta
+Proprietário: Sara Walker
+Altura: 1,91 m
+--
+Placa JHDQQ74
+Marca: Honda
+Cor: Laranja
+Proprietário: Kaliese Sudol
+Altura: 1,93 m
+--
+Placa N00RAJU
+Marca: Honda
+Cor: Laranja
+Proprietário: Melek Toth
+Altura: 1,75 m
+--
+Placa HM8Q0G9
+Marca: Honda
+Cor: Vermelho
+Proprietário: Mel Quinonez
+Altura: 1,8 m
+--
+Placa UKJG9HU
+Marca: Honda
+Cor: Amarela
+Proprietário: Jing Monteiro
+Altura: 1,93 m
+--
+Placa TXYAEM7
+Marca: Honda
+Cor: Petróleo
+Proprietário: Franklin Koala
+Altura: 1,73 m
+--
+Placa VQXL95S
+Marca: Honda
+Cor: Amarela
+Proprietário: Geir Brash
+Altura: 1,73 m
+--
+Placa 2ID2L0K
+Marca: Honda
+Cor: Dourada
+Proprietário: Blair Wei
+Altura: 1,91 m
+--
+Placa M6I0LRY
+Marca: Honda
+Cor: Petróleo
+Proprietário: Megan Angelov
+Altura: 1,88 m
+--
+Placa 03D7HCJ
+Marca: Honda
+Cor: Prata
+Proprietário: Michael Caceres
+Altura: 1,91 m
+--
+Placa 3BMO8OZ
+Marca: Honda
+Cor: Laranja
+Proprietário: Krista Coci
+Altura: 1,7 m
+--
+Placa QX9N39M
+Marca: Honda
+Cor: Preta
+Proprietário: Ronald Veiga
+Altura: 1,65 m
+--
+Placa 195RS2U
+Marca: Honda
+Cor: Amarela
+Proprietário: Abouhalima Uptagrafft
+Altura: 1,63 m
+--
+Placa K38L65K
+Marca: Honda
+Cor: Azul
+Proprietário: Dimitri Kim
+Altura: 1,8 m
+--
+Placa DXORSFU
+Marca: Honda
+Cor: Dourada
+Proprietário: Tina Ipsen
+Altura: 1,6 m
+--
+Placa 6GPYOR7
+Marca: Honda
+Cor: Amarela
+Proprietário: Martino Mayer
+Altura: 1,88 m
+--
+Placa WLI39H0
+Marca: Honda
+Cor: Branca
+Proprietário: Sayed Savitskaya
+Altura: 1,75 m
+--
+Placa 0EOWIH2
+Marca: Honda
+Cor: Rosa
+Proprietário: Yoo Miller
+Altura: 1,88 m
+--
+Placa 9YQWZ7O
+Marca: Honda
+Cor: Verde
+Proprietário: Yuliya Furukawa
+Altura: 1,68 m
+--
+Placa XBRHZ7O
+Marca: Honda
+Cor: Laranja
+Proprietário: Dmytro Arms
+Altura: 1,58 m
+--
+Placa DWA1IIT
+Marca: Honda
+Cor: Vermelho
+Proprietário: Leonardo Ghebresilasie
+Altura: 1,55 m
+--
+Placa 90RR74O
+Marca: Honda
+Cor: Dourada
+Proprietário: Artur Truppa
+Altura: 1,68 m
+--
+Placa DH6LULR
+Marca: Honda
+Cor: Vermelho
+Proprietário: Saulius Sinnig
+Altura: 1,75 m
+--
+Placa FF6QR6A
+Marca: Honda
+Cor: Azul
+Proprietário: Kurt Fayez
+Altura: 1,58 m
+--
+Placa M6U8CR9
+Marca: Honda
+Cor: Amarela
+Proprietário: Nguyen Ozolina-Kovala
+Altura: 1,53 m
+--
+Placa SQ8Z6O4
+Marca: Honda
+Cor: Preta
+Proprietário: Maria Emmons
+Altura: 1,86 m
+--
+Placa A33H4HC
+Marca: Honda
+Cor: Petróleo
+Proprietário: Khetag Wagner
+Altura: 1,93 m
+--
+Placa ZB2X75V
+Marca: Honda
+Cor: Laranja
+Proprietário: Aneta Cardoso
+Altura: 1,88 m
+--
+Placa ZOI4DTW
+Marca: Honda
+Cor: Azul
+Proprietário: Levan Ingram
+Altura: 1,8 m
+--
+Placa K1OU3X8
+Marca: Honda
+Cor: Dourada
+Proprietário: Yasunari Inzikuru
+Altura: 1,83 m
+--
+Placa AN1V84V
+Marca: Honda
+Cor: Branca
+Proprietário: Hyunsung Ivancsik
+Altura: 1,68 m
+--
+Placa 7ND5UNM
+Marca: Honda
+Cor: Preta
+Proprietário: Camille Gao
+Altura: 1,75 m
+--
+Placa OL1S71K
+Marca: Honda
+Cor: Prata
+Proprietário: Mark Turner
+Altura: 1,6 m
+--
+Placa VQCNQ4K
+Marca: Honda
+Cor: Dourada
+Proprietário: Crispin Terraza
+Altura: 1,93 m
+--
+Placa CMZBTAI
+Marca: Honda
+Cor: Petróleo
+Proprietário: Silviya Cesarini
+Altura: 1,86 m
+--
+Placa AMX81V8
+Marca: Honda
+Cor: Preta
+Proprietário: Nahla Zhedik
+Altura: 1,58 m
+--
+Placa 3NFR5GQ
+Marca: Honda
+Cor: Laranja
+Proprietário: Alvaro Xu
+Altura: 1,73 m
+--
+Placa T6EER3Y
+Marca: Honda
+Cor: Rosa
+Proprietário: Revaz Melfort
+Altura: 1,65 m
+--
+Placa L337QE9
+Marca: Honda
+Cor: Azul
+Proprietário: Erika Owens
+Altura: 1,96 m
+--
+Placa CQQ9BIT
+Marca: Honda
+Cor: Azul
+Proprietário: Martyna Kirkbride
+Altura: 1,91 m
+--
+Placa 68CVHT5
+Marca: Honda
+Cor: Azul
+Proprietário: Emily Chow
+Altura: 1,7 m
+--
+Placa 45A4GXB
+Marca: Honda
+Cor: Rosa
+Proprietário: Ieuan Zbogar
+Altura: 1,86 m
+--
+Placa EKQC5YB
+Marca: Honda
+Cor: Branca
+Proprietário: Liam Ahmed
+Altura: 1,63 m
+--
+Placa KFQHMVH
+Marca: Honda
+Cor: Azul
+Proprietário: Lubomir Frank
+Altura: 1,91 m
+--
+Placa J7V5X4E
+Marca: Honda
+Cor: Vermelho
+Proprietário: Morgan Akkar
+Altura: 1,58 m
+--
+Placa LCR6VHO
+Marca: Honda
+Cor: Vermelho
+Proprietário: Andrey Osipova
+Altura: 1,8 m
+--
+Placa 4U36S1N
+Marca: Honda
+Cor: Vermelho
+Proprietário: Igor Turner
+Altura: 1,73 m
+--
+Placa L3YH5Q3
+Marca: Honda
+Cor: Dourada
+Proprietário: Sviatlana Yin
+Altura: 1,78 m
+--
+Placa LOKVQG5
+Marca: Honda
+Cor: Preta
+Proprietário: Christophe Radu
+Altura: 1,6 m
+--
+Placa XX78AVB
+Marca: Honda
+Cor: Verde
+Proprietário: Jan-Di Ilias
+Altura: 1,93 m
+--
+Placa AW50VL9
+Marca: Honda
+Cor: Branca
+Proprietário: Fionnuala Sameshima
+Altura: 1,6 m
+--
+Placa JPOI6R7
+Marca: Honda
+Cor: Petróleo
+Proprietário: Aliaksandr Ovinou
+Altura: 1,78 m
+--
+Placa C4ZLE28
+Marca: Honda
+Cor: Petróleo
+Proprietário: Serhiy Kang
+Altura: 1,78 m
+--
+Placa O2BRU69
+Marca: Honda
+Cor: Laranja
+Proprietário: Neymar Kaczor
+Altura: 1,65 m
+--
+Placa 05J0WK1
+Marca: Honda
+Cor: Amarela
+Proprietário: Methkal Grabich
+Altura: 1,53 m
+--
+Placa XVORPVZ
+Marca: Honda
+Cor: Dourada
+Proprietário: Njisane Saleh
+Altura: 1,63 m
+--
+Placa 34RT3HI
+Marca: Honda
+Cor: Branca
+Proprietário: Anthony Kudlicka
+Altura: 1,88 m
+--
+Placa 92OVPDW
+Marca: Honda
+Cor: Prata
+Proprietário: Lisa Peralta
+Altura: 1,83 m
+--
+Placa 1H8BOCF
+Marca: Honda
+Cor: Amarela
+Proprietário: Diego Stojic
+Altura: 1,86 m
+--
+Placa J8HLPRL
+Marca: Honda
+Cor: Vermelho
+Proprietário: Tatjana Henriquez
+Altura: 1,65 m
+--
+Placa UOJ9T65
+Marca: Honda
+Cor: Preta
+Proprietário: Sebastian Marcala-Nummela
+Altura: 1,53 m
+--
+Placa ZLET1A1
+Marca: Honda
+Cor: Rosa
+Proprietário: Huajun Oates
+Altura: 1,65 m
+--
+Placa K9UBOJ1
+Marca: Honda
+Cor: Preta
+Proprietário: Irakli Dinu
+Altura: 1,7 m
+--
+Placa XEBN7AX
+Marca: Honda
+Cor: Branca
+Proprietário: Masashi Angilella
+Altura: 1,93 m
+--
+Placa XVJPR58
+Marca: Honda
+Cor: Preta
+Proprietário: Honami Kozhenkova
+Altura: 1,68 m
+--
+Placa WZFW1Z0
+Marca: Honda
+Cor: Amarela
+Proprietário: Automne Driel
+Altura: 1,8 m
+--
+Placa 3A83HNO
+Marca: Honda
+Cor: Rosa
+Proprietário: Anastasia Gal
+Altura: 1,7 m
+--
+Placa RHFXPCN
+Marca: Honda
+Cor: Prata
+Proprietário: Abdihakem Jongjit
+Altura: 1,93 m
+--
+Placa QZMWMSJ
+Marca: Honda
+Cor: Dourada
+Proprietário: Dorian Sankuru
+Altura: 1,65 m
+--
+Placa U23MVNY
+Marca: Honda
+Cor: Rosa
+Proprietário: Jessica Lee
+Altura: 1,93 m
+--
+Placa N5NPSCZ
+Marca: Honda
+Cor: Branca
+Proprietário: Katharina Bartonickova
+Altura: 1,55 m
+--
+Placa TUDV33V
+Marca: Honda
+Cor: Verde
+Proprietário: Anne Grishaeva
+Altura: 1,63 m
+--
+Placa 6GONOJY
+Marca: Honda
+Cor: Azul
+Proprietário: Paul Almeida
+Altura: 1,58 m
+--
+Placa LXPRA27
+Marca: Honda
+Cor: Petróleo
+Proprietário: Stepan Vecchi
+Altura: 1,8 m
+--
+Placa Y3TENQQ
+Marca: Honda
+Cor: Amarela
+Proprietário: Odile Green
+Altura: 1,58 m
+--
+Placa 31AP6U5
+Marca: Honda
+Cor: Verde
+Proprietário: Noor Borzakovskiy
+Altura: 1,8 m
+--
+Placa 1V3K5Z0
+Marca: Honda
+Cor: Verde
+Proprietário: Chia Hilario
+Altura: 1,78 m
+--
+Placa 9FY6G9C
+Marca: Honda
+Cor: Verde
+Proprietário: Todor Hernandez
+Altura: 1,7 m
+--
+Placa OEUYCP7
+Marca: Honda
+Cor: Preta
+Proprietário: Pierre-Alexis Valiyev
+Altura: 1,86 m
+--
+Placa A2W1N2Y
+Marca: Honda
+Cor: Amarela
+Proprietário: Trevor Peno
+Altura: 1,58 m
+--
+Placa IZMNYJY
+Marca: Honda
+Cor: Verde
+Proprietário: Darvis Vogt
+Altura: 1,68 m
+--
+Placa C8TJEII
+Marca: Honda
+Cor: Prata
+Proprietário: Ndiatte Brown
+Altura: 1,75 m
+--
+Placa JB8AXH5
+Marca: Honda
+Cor: Laranja
+Proprietário: Annette Ouechtati
+Altura: 1,53 m
+--
+Placa T46S1O8
+Marca: Honda
+Cor: Azul
+Proprietário: Pape Kantarci
+Altura: 1,86 m
+--
+Placa FFRM7XI
+Marca: Honda
+Cor: Azul
+Proprietário: Chris Keller
+Altura: 1,58 m
+--
+Placa C3UXIVP
+Marca: Honda
+Cor: Dourada
+Proprietário: Dmitriy Montano
+Altura: 1,78 m
+--
+Placa B81KHOF
+Marca: Honda
+Cor: Petróleo
+Proprietário: Evgeniya Maneva
+Altura: 1,93 m
+--
+Placa Q8Z7ZJO
+Marca: Honda
+Cor: Rosa
+Proprietário: Christen Gonzalez
+Altura: 1,91 m
+--
+Placa WI73RTM
+Marca: Honda
+Cor: Verde
+Proprietário: Saskia Pliev
+Altura: 1,78 m
+--
+Placa 0EQOI3G
+Marca: Honda
+Cor: Verde
+Proprietário: Siham SCHIMAK
+Altura: 1,93 m
+--
+Placa 2DWSYO6
+Marca: Honda
+Cor: Prata
+Proprietário: Jere Guidea
+Altura: 1,73 m
+--
+Placa 05D8H3O
+Marca: Honda
+Cor: Amarela
+Proprietário: Elania Rodionova
+Altura: 1,6 m
+--
+Placa Z16CGKH
+Marca: Honda
+Cor: Petróleo
+Proprietário: Charline Chen
+Altura: 1,8 m
+--
+Placa 4KH0BWW
+Marca: Honda
+Cor: Verde
+Proprietário: Leire Saltanovic
+Altura: 1,93 m
+--
+Placa ECVK9N7
+Marca: Honda
+Cor: Rosa
+Proprietário: Bubmin Saenz
+Altura: 1,86 m
+--
+Placa 98N67DL
+Marca: Honda
+Cor: Rosa
+Proprietário: Luigi Marshall
+Altura: 1,53 m
+--
+Placa U9X17L8
+Marca: Honda
+Cor: Vermelho
+Proprietário: Madonna Kim
+Altura: 1,93 m
+--
+Placa Q1GA3ZX
+Marca: Honda
+Cor: Vermelho
+Proprietário: Wanida Barjaktarovic
+Altura: 1,78 m
+--
+Placa LL3PX37
+Marca: Honda
+Cor: Dourada
+Proprietário: Lianne Schuring
+Altura: 1,68 m
+--
+Placa WV7X5J9
+Marca: Honda
+Cor: Rosa
+Proprietário: Viktor Michshuk
+Altura: 1,75 m
+--
+Placa 90FPL8X
+Marca: Honda
+Cor: Laranja
+Proprietário: Yasunari Jokovic
+Altura: 1,53 m
+--
+Placa VMWXMFU
+Marca: Honda
+Cor: Amarela
+Proprietário: Pawel Jensen
+Altura: 1,78 m
+--
+Placa 63FS2YX
+Marca: Honda
+Cor: Laranja
+Proprietário: Dmitriy Liang
+Altura: 1,88 m
+--
+Placa K9UK1GY
+Marca: Honda
+Cor: Dourada
+Proprietário: Niclas Tymoshchenko
+Altura: 1,58 m
+--
+Placa NEEIFKR
+Marca: Honda
+Cor: Laranja
+Proprietário: Jacobine Fowles
+Altura: 1,68 m
+--
+Placa BTP4E83
+Marca: Honda
+Cor: Prata
+Proprietário: Stephanie Chebbi
+Altura: 1,68 m
+--
+Placa WUFF58I
+Marca: Honda
+Cor: Petróleo
+Proprietário: David Rahimi
+Altura: 1,78 m
+--
+Placa DLWWIR8
+Marca: Honda
+Cor: Laranja
+Proprietário: Kiril Larsson
+Altura: 1,68 m
+--
+Placa CPI8VAJ
+Marca: Honda
+Cor: Rosa
+Proprietário: Nicholas Warlow
+Altura: 1,8 m
+--
+Placa 7UV9X0P
+Marca: Honda
+Cor: Rosa
+Proprietário: Almensh Zbogar
+Altura: 1,65 m
+--
+Placa RLUC9VG
+Marca: Honda
+Cor: Azul
+Proprietário: Muller Nikcevic
+Altura: 1,8 m
+--
+Placa 8F69PEP
+Marca: Honda
+Cor: Branca
+Proprietário: Bianca Sekyrova
+Altura: 1,88 m
+--
+Placa QS22UFB
+Marca: Honda
+Cor: Branca
+Proprietário: Prince Zyl
+Altura: 1,88 m
+--
+Placa FGZ28O0
+Marca: Honda
+Cor: Rosa
+Proprietário: Caroline Kirdyapkina
+Altura: 1,93 m
+--
+Placa RSNHO4R
+Marca: Honda
+Cor: Dourada
+Proprietário: Lukas Gong
+Altura: 1,73 m
+--
+Placa HZUX6TT
+Marca: Honda
+Cor: Rosa
+Proprietário: Gilles Zhang
+Altura: 1,8 m
+--
+Placa 3M4HCFM
+Marca: Honda
+Cor: Amarela
+Proprietário: Marcelien Hosnyanszky
+Altura: 1,75 m
+--
+Placa OFMJHOS
+Marca: Honda
+Cor: Vermelho
+Proprietário: Sergey Vasilionak
+Altura: 1,83 m
+--
+Placa DT8SKQ3
+Marca: Honda
+Cor: Prata
+Proprietário: Kim Estrada
+Altura: 1,83 m
+--
+Placa TK5M34H
+Marca: Honda
+Cor: Dourada
+Proprietário: Laura Wu
+Altura: 1,73 m
+--
+Placa 0BCW8P0
+Marca: Honda
+Cor: Branca
+Proprietário: le Toksoy
+Altura: 1,63 m
+--
+Placa X4UQ2ON
+Marca: Honda
+Cor: Azul
+Proprietário: Tiff Fehr
+Altura: 1,63 m
+--
+Placa LOXZMA9
+Marca: Honda
+Cor: Laranja
+Proprietário: Ava Silva
+Altura: 1,58 m
+--
+Placa QMR9G0F
+Marca: Honda
+Cor: Vermelho
+Proprietário: Kamil Kintzer
+Altura: 1,53 m
+--
+Placa DLODUXD
+Marca: Honda
+Cor: Preta
+Proprietário: Maryam Allen
+Altura: 1,88 m
+--
+Placa RWTO749
+Marca: Honda
+Cor: Preta
+Proprietário: Ian Rhodes
+Altura: 1,91 m
+--
+Placa O6SYPVM
+Marca: Honda
+Cor: Laranja
+Proprietário: Melaine Souleymane
+Altura: 1,6 m
+--
+Placa BFWWUNO
+Marca: Honda
+Cor: Preta
+Proprietário: Natalia Kim
+Altura: 1,68 m
+--
+Placa O6S9GZK
+Marca: Honda
+Cor: Vermelho
+Proprietário: Belal Wang
+Altura: 1,86 m
+--
+Placa XUC2VZ6
+Marca: Honda
+Cor: Azul
+Proprietário: Brent Queen
+Altura: 1,7 m
+--
+Placa HMI44Q1
+Marca: Honda
+Cor: Prata
+Proprietário: Fabienne Horvat-Panda
+Altura: 1,88 m
+--
+Placa O5EPHK2
+Marca: Honda
+Cor: Azul
+Proprietário: Hagos Kempas
+Altura: 1,65 m
+--
+Placa DQ8X9DP
+Marca: Honda
+Cor: Prata
+Proprietário: Nicolas Rapinoe
+Altura: 1,68 m
+--
+Placa RKZHFQ5
+Marca: Honda
+Cor: Petróleo
+Proprietário: Hyeonwoo Rolin
+Altura: 1,8 m
+--
+Placa YFRBAE7
+Marca: Honda
+Cor: Rosa
+Proprietário: Wenling Aguiar
+Altura: 1,55 m
+--
+Placa T4YA4M4
+Marca: Honda
+Cor: Preta
+Proprietário: Enzo Balciunas
+Altura: 1,53 m
+--
+Placa 6GBK62G
+Marca: Honda
+Cor: Azul
+Proprietário: Ruta Trowbridge
+Altura: 1,73 m
+--
+Placa LMN1EJN
+Marca: Honda
+Cor: Branca
+Proprietário: Haakan Okrame
+Altura: 1,68 m
+--
+Placa 2GTMCPJ
+Marca: Honda
+Cor: Branca
+Proprietário: Benjamin Kuramagomedov
+Altura: 1,73 m
+--
+Placa OEZGL21
+Marca: Honda
+Cor: Preta
+Proprietário: Urs Kim
+Altura: 1,83 m
+--
+Placa YCTPFGR
+Marca: Honda
+Cor: Dourada
+Proprietário: Morgan Najah
+Altura: 1,63 m
+--
+Placa Q2V0JVK
+Marca: Honda
+Cor: Branca
+Proprietário: Nathan Barnhart
+Altura: 1,53 m
+--
+Placa O65J5TO
+Marca: Honda
+Cor: Laranja
+Proprietário: Grigoriy Zhang
+Altura: 1,7 m
+--
+Placa NI2NBDA
+Marca: Honda
+Cor: Amarela
+Proprietário: Dana Potent
+Altura: 1,91 m
+--
+Placa L337539
+Marca: Honda
+Cor: Azul
+Proprietário: Aron Pilhofer
+Altura: 1,6 m
+--
+Placa 08G6DXU
+Marca: Honda
+Cor: Verde
+Proprietário: Benjamin Jeong
+Altura: 1,83 m
+--
+Placa CPYKOHM
+Marca: Honda
+Cor: Azul
+Proprietário: Dagmara Balla
+Altura: 1,6 m
+--
+Placa L7FAK0D
+Marca: Honda
+Cor: Vermelho
+Proprietário: Jack Shafar
+Altura: 1,83 m
+--
+Placa 74KH6YS
+Marca: Honda
+Cor: Vermelho
+Proprietário: Martin Kergyte
+Altura: 1,8 m
+--
+Placa 6FKLW1V
+Marca: Honda
+Cor: Amarela
+Proprietário: Marcia Amri
+Altura: 1,53 m
+--
+Placa PFM4KX8
+Marca: Honda
+Cor: Amarela
+Proprietário: Virgil Neny
+Altura: 1,63 m
+--
+Placa QV7T7HH
+Marca: Honda
+Cor: Dourada
+Proprietário: Allan Liu
+Altura: 1,55 m
+--
+Placa GZM4HBV
+Marca: Honda
+Cor: Branca
+Proprietário: Nocawe Zolnerovics
+Altura: 1,75 m
+--
+Placa SJ7V5J3
+Marca: Honda
+Cor: Azul
+Proprietário: Maria Figlioli
+Altura: 1,78 m
+--
+Placa H8FRHXV
+Marca: Honda
+Cor: Branca
+Proprietário: Baorong Mir
+Altura: 1,7 m
+--
+Placa W2G08O9
+Marca: Honda
+Cor: Branca
+Proprietário: Kyung Kaifuchi
+Altura: 1,93 m
+--
+Placa 0K1RLWP
+Marca: Honda
+Cor: Preta
+Proprietário: Jan Merzougui
+Altura: 1,53 m
+--
+Placa GZPOZB1
+Marca: Honda
+Cor: Amarela
+Proprietário: Vincent Cogdell
+Altura: 1,63 m
+--
+Placa AT9GYRJ
+Marca: Honda
+Cor: Branca
+Proprietário: Tom Dvorsak
+Altura: 1,63 m
+--
+Placa Z0AJF20
+Marca: Honda
+Cor: Vermelho
+Proprietário: Maria Morgan
+Altura: 1,8 m
+--
+Placa GY13NEP
+Marca: Honda
+Cor: Azul
+Proprietário: Sholpan Draudvila
+Altura: 1,6 m
+--
+Placa YQ8NWQS
+Marca: Honda
+Cor: Prata
+Proprietário: Miguel Skujyte
+Altura: 1,93 m
+--
+Placa YFPC7MA
+Marca: Honda
+Cor: Laranja
+Proprietário: Illse Mylonakis
+Altura: 1,75 m
+--
+Placa 1JXN65Y
+Marca: Honda
+Cor: Prata
+Proprietário: Patricia Scott
+Altura: 1,8 m
+--
+Placa XQQT198
+Marca: Honda
+Cor: Amarela
+Proprietário: Irina Liu
+Altura: 1,73 m
+--
+Placa ZA3GETQ
+Marca: Honda
+Cor: Vermelho
+Proprietário: Todd Kuzmenok
+Altura: 1,91 m
+--
+Placa XYV2MEC
+Marca: Honda
+Cor: Branca
+Proprietário: Maja Balykina
+Altura: 1,53 m
+--
+Placa PHUT36Z
+Marca: Honda
+Cor: Petróleo
+Proprietário: Lindsay Guenot
+Altura: 1,65 m
+--
+Placa 5D0T3L7
+Marca: Honda
+Cor: Azul
+Proprietário: Shane Wu
+Altura: 1,73 m
+--
+Placa V6821N8
+Marca: Honda
+Cor: Amarela
+Proprietário: Beth Moorwood
+Altura: 1,73 m
+--
+Placa 9KGIN44
+Marca: Honda
+Cor: Rosa
+Proprietário: Farrah Sdiri
+Altura: 1,6 m
+--
+Placa 2CT7FLT
+Marca: Honda
+Cor: Laranja
+Proprietário: Cesar Joppich
+Altura: 1,53 m
+--
+Placa 5FPI9CW
+Marca: Honda
+Cor: Dourada
+Proprietário: Jarmila Hallgrimsson
+Altura: 1,73 m
+--
+Placa VLWO19S
+Marca: Honda
+Cor: Prata
+Proprietário: Khamis Angeloni
+Altura: 1,65 m
+--
+Placa 9C0BMIH
+Marca: Honda
+Cor: Rosa
+Proprietário: Bohdan Kuhnle
+Altura: 1,6 m
+--
+Placa SMGEWGB
+Marca: Honda
+Cor: Azul
+Proprietário: Ivan Abdusalomov
+Altura: 1,58 m
+--
+Placa NSZ7YY4
+Marca: Honda
+Cor: Verde
+Proprietário: Stacey Frolov
+Altura: 1,91 m
+--
+Placa F6MAW8J
+Marca: Honda
+Cor: Prata
+Proprietário: Pascal Davaasukh
+Altura: 1,86 m
+--
+Placa HUWGX8O
+Marca: Honda
+Cor: Laranja
+Proprietário: Alexandre Sawers
+Altura: 1,7 m
+--
+Placa J70N9SA
+Marca: Honda
+Cor: Petróleo
+Proprietário: Fabio Simic
+Altura: 1,88 m
+--
+Placa 6ZSJTK1
+Marca: Honda
+Cor: Prata
+Proprietário: Satomi Xian
+Altura: 1,8 m
+--
+Placa ICSPMC5
+Marca: Honda
+Cor: Vermelho
+Proprietário: Ken Roland
+Altura: 1,7 m
+--
+Placa 4WFGM2M
+Marca: Honda
+Cor: Rosa
+Proprietário: Gediminas Whitehurst
+Altura: 1,53 m
+--
+Placa IG2ZQ6F
+Marca: Honda
+Cor: Laranja
+Proprietário: Delfina Lindfors
+Altura: 1,53 m
+--
+Placa HV4BNNH
+Marca: Honda
+Cor: Rosa
+Proprietário: Sergio Calzada
+Altura: 1,73 m
+--
+Placa BVQ4FCB
+Marca: Honda
+Cor: Petróleo
+Proprietário: Janice Glasnovic
+Altura: 1,65 m
+--
+Placa UO7ERGV
+Marca: Honda
+Cor: Amarela
+Proprietário: Marcin Dyen
+Altura: 1,93 m
+--
+Placa PPJW4G4
+Marca: Honda
+Cor: Prata
+Proprietário: Amelie Svensson
+Altura: 1,93 m
+--
+Placa RWM24Z6
+Marca: Honda
+Cor: Azul
+Proprietário: Madias Jeffery
+Altura: 1,53 m
+--
+Placa S305CYB
+Marca: Honda
+Cor: Dourada
+Proprietário: David Svarc
+Altura: 1,6 m
+--
+Placa RQEDXRL
+Marca: Honda
+Cor: Azul
+Proprietário: Phillipp Al-Mashhadani
+Altura: 1,6 m
+--
+Placa 6IVL7DH
+Marca: Honda
+Cor: Vermelho
+Proprietário: Azad Honeybone
+Altura: 1,73 m
+--
+Placa 5I8MIS1
+Marca: Honda
+Cor: Rosa
+Proprietário: Mostafa Kleen
+Altura: 1,65 m
+--
+Placa PGYUOIV
+Marca: Honda
+Cor: Rosa
+Proprietário: Nick Burrows
+Altura: 1,68 m
+--
+Placa DZ36WRE
+Marca: Honda
+Cor: Petróleo
+Proprietário: Nicholas Ihle
+Altura: 1,58 m
+--
+Placa DXGC5YE
+Marca: Honda
+Cor: Preta
+Proprietário: Natthanan Caluag
+Altura: 1,55 m
+--
+Placa IHTL2WD
+Marca: Honda
+Cor: Amarela
+Proprietário: Kasper You
+Altura: 1,53 m
+--
+Placa GR1Y3YX
+Marca: Honda
+Cor: Prata
+Proprietário: Justine Lavrentyev
+Altura: 1,78 m
+--
+Placa BRR3RSI
+Marca: Honda
+Cor: Prata
+Proprietário: Joshua Grechishnikova
+Altura: 1,6 m
+--
+Placa G8LU48U
+Marca: Honda
+Cor: Rosa
+Proprietário: Ligia Czakova
+Altura: 1,83 m
+--
+Placa C8J5CIF
+Marca: Honda
+Cor: Preta
+Proprietário: Yun-Hee Karagoz
+Altura: 1,8 m
+--
+Placa L337369
+Marca: Honda
+Cor: Azul
+Proprietário: Heather Billings
+Altura: 1,58 m
+--
+Placa 6PH8UW0
+Marca: Honda
+Cor: Prata
+Proprietário: Donglun Nhlapo
+Altura: 1,78 m
+--
+Placa CWNS81S
+Marca: Honda
+Cor: Petróleo
+Proprietário: Peter Howieson
+Altura: 1,93 m
+--
+Placa N187F4R
+Marca: Honda
+Cor: Amarela
+Proprietário: Derek Dancette
+Altura: 1,8 m
+--
+Placa RFUXIV1
+Marca: Honda
+Cor: Petróleo
+Proprietário: Saralee Wilson
+Altura: 1,83 m
+--
+Placa IKO4ZET
+Marca: Honda
+Cor: Branca
+Proprietário: Suji Labani
+Altura: 1,78 m
+--
+Placa 63NCG0U
+Marca: Honda
+Cor: Azul
+Proprietário: Alberto Pedersen
+Altura: 1,93 m
+--
+Placa L337DV9
+Marca: Honda
+Cor: Azul
+Proprietário: Joe Germuska
+Altura: 1,88 m
+--
+Placa 4XPMDTN
+Marca: Honda
+Cor: Vermelho
+Proprietário: Anqi Hernandez
+Altura: 1,7 m
+--
+Placa RAFNL3C
+Marca: Honda
+Cor: Preta
+Proprietário: Johnno Listopadova
+Altura: 1,8 m
+--
+Placa FFSN25R
+Marca: Honda
+Cor: Rosa
+Proprietário: David Jr
+Altura: 1,73 m
+--
+Placa I57YW77
+Marca: Honda
+Cor: Preta
+Proprietário: Marleen Rodrigues
+Altura: 1,8 m
+--
+Placa UHFXI5X
+Marca: Honda
+Cor: Rosa
+Proprietário: Krista Dai
+Altura: 1,88 m
+--
+Placa A2KQ1MU
+Marca: Honda
+Cor: Branca
+Proprietário: Sinta Denisov
+Altura: 1,86 m
+--
+Placa K0LDDGB
+Marca: Honda
+Cor: Verde
+Proprietário: Jeff Larson
+Altura: 1,96 m
+--
+Placa V2ECTE7
+Marca: Honda
+Cor: Verde
+Proprietário: Younggwon Fabre
+Altura: 1,73 m
+--
+Placa RPUVTA0
+Marca: Honda
+Cor: Rosa
+Proprietário: Ross Nakamura
+Altura: 1,55 m
+--
+Placa VO956PD
+Marca: Honda
+Cor: Branca
+Proprietário: Ciaran Susanu
+Altura: 1,91 m
+--
+Placa S2S3SVO
+Marca: Honda
+Cor: Dourada
+Proprietário: Stephanie O`regan
+Altura: 1,86 m
+--
+Placa 67UP59B
+Marca: Honda
+Cor: Vermelho
+Proprietário: Iain Hartig
+Altura: 1,7 m
+--
+Placa H0CS4NM
+Marca: Honda
+Cor: Branca
+Proprietário: Kenneth Howden
+Altura: 1,63 m
+--
+Placa X059MKH
+Marca: Honda
+Cor: Azul
+Proprietário: Jill Magdy
+Altura: 1,63 m
+--
+Placa KQNOM79
+Marca: Honda
+Cor: Vermelho
+Proprietário: Grzegorz Tipsarevic
+Altura: 1,88 m
+--
+Placa PS27G5Q
+Marca: Honda
+Cor: Vermelho
+Proprietário: James Santoso
+Altura: 1,86 m
+--
+Placa NEFR0CN
+Marca: Honda
+Cor: Branca
+Proprietário: Bebey Adamski
+Altura: 1,6 m
+--
+Placa KTKZVU4
+Marca: Honda
+Cor: Branca
+Proprietário: Serghei Alhasan
+Altura: 1,78 m
+--
+Placa DLZI42E
+Marca: Honda
+Cor: Branca
+Proprietário: Nathan Freixa
+Altura: 1,73 m
+--
+Placa 4BXW9BJ
+Marca: Honda
+Cor: Preta
+Proprietário: Glenn Gonzalez
+Altura: 1,91 m
+--
+Placa V3KNL9A
+Marca: Honda
+Cor: Rosa
+Proprietário: Ibrahim Oie
+Altura: 1,53 m
+--
+Placa AP9CQTW
+Marca: Honda
+Cor: Vermelho
+Proprietário: Christine Bonk
+Altura: 1,93 m
+--
+Placa TQAG10Y
+Marca: Honda
+Cor: Laranja
+Proprietário: Youngran Inthavong
+Altura: 1,68 m
+--
+Placa PLWYR6M
+Marca: Honda
+Cor: Prata
+Proprietário: Ken Eom
+Altura: 1,8 m
+--
+Placa IGQZ39N
+Marca: Honda
+Cor: Laranja
+Proprietário: Hamdan Zabelinskaya
+Altura: 1,91 m
+--
+Placa XQNPFTF
+Marca: Honda
+Cor: Dourada
+Proprietário: Pavlos Nicolas
+Altura: 1,73 m
+--
+Placa JXZLPXY
+Marca: Honda
+Cor: Branca
+Proprietário: Grzegorz Kohistani
+Altura: 1,73 m
+--
+Placa THJF682
+Marca: Honda
+Cor: Laranja
+Proprietário: Hae-Ran Garcia
+Altura: 1,55 m
+--
+Placa O7LIG9I
+Marca: Honda
+Cor: Preta
+Proprietário: Alin Klaas
+Altura: 1,78 m
+--
+Placa IVLP2N8
+Marca: Honda
+Cor: Rosa
+Proprietário: Marta Kiala
+Altura: 1,58 m
+--
+Placa 9SQ42Y9
+Marca: Honda
+Cor: Amarela
+Proprietário: Rhys Faber
+Altura: 1,73 m
+--
+Placa PZ6Z32Z
+Marca: Honda
+Cor: Azul
+Proprietário: Adelinde Mangold
+Altura: 1,78 m
+--
+Placa LRZYB1T
+Marca: Honda
+Cor: Vermelho
+Proprietário: Ryan Welte
+Altura: 1,73 m
+--
+Placa E9B2CSB
+Marca: Honda
+Cor: Rosa
+Proprietário: Mohanad Raudaschl
+Altura: 1,91 m
+--
+Placa 6SMEAL0
+Marca: Honda
+Cor: Rosa
+Proprietário: Yuhan Simonet
+Altura: 1,8 m
+--
+Placa UC1NG2N
+Marca: Honda
+Cor: Azul
+Proprietário: Svenja Marennikova
+Altura: 1,6 m
+--
+Placa RC8BNM4
+Marca: Honda
+Cor: Vermelho
+Proprietário: Michal Krsmanovic
+Altura: 1,73 m
+--
+Placa 2Z85H7Q
+Marca: Honda
+Cor: Laranja
+Proprietário: Guan Cabrera
+Altura: 1,91 m
+--
+Placa JHKJE4A
+Marca: Honda
+Cor: Dourada
+Proprietário: Mclain Rakoczy
+Altura: 1,83 m
+--
+Placa AI75X6L
+Marca: Honda
+Cor: Preta
+Proprietário: Marcel Cainero
+Altura: 1,91 m
+--
+Placa 4R02S8A
+Marca: Honda
+Cor: Laranja
+Proprietário: Dani Loukas
+Altura: 1,68 m
+--
+Placa MH92AIZ
+Marca: Honda
+Cor: Amarela
+Proprietário: Jieun Sukhorukov
+Altura: 1,53 m
+--
+Placa AQR5RZU
+Marca: Honda
+Cor: Laranja
+Proprietário: Darcy Zouari
+Altura: 1,93 m
+--
+Placa YY8867Q
+Marca: Honda
+Cor: Dourada
+Proprietário: Gianluca Schmidt
+Altura: 1,55 m
+--
+Placa FVD29O1
+Marca: Honda
+Cor: Verde
+Proprietário: Lubov Begaj
+Altura: 1,8 m
+--
+Placa D81PNT0
+Marca: Honda
+Cor: Azul
+Proprietário: Marharyta Willmott
+Altura: 1,83 m
+--
+Placa W3B2SYH
+Marca: Honda
+Cor: Verde
+Proprietário: Kerri Decosse
+Altura: 1,68 m
+--
+Placa 5X5XZK1
+Marca: Honda
+Cor: Azul
+Proprietário: Moses Sihame
+Altura: 1,55 m
+--
+Placa 2VB75O9
+Marca: Honda
+Cor: Verde
+Proprietário: Pieter-Jan Huang
+Altura: 1,65 m
+--
+Placa QL48DE1
+Marca: Honda
+Cor: Amarela
+Proprietário: Maryna Tyler
+Altura: 1,75 m
+--
+Placa BE9WJYX
+Marca: Honda
+Cor: Dourada
+Proprietário: Gonzalo Pacheco
+Altura: 1,53 m
+--
+Placa 28XRG6U
+Marca: Honda
+Cor: Azul
+Proprietário: Petr Waterfield
+Altura: 1,58 m
+--
+Placa OWFMXT9
+Marca: Honda
+Cor: Azul
+Proprietário: Kelley Nurmagomedov
+Altura: 1,75 m
+--
+Placa VPTA7NV
+Marca: Honda
+Cor: Prata
+Proprietário: Triyaningsih Elkawiseh
+Altura: 1,86 m
+--
+Placa TGEH1NP
+Marca: Honda
+Cor: Prata
+Proprietário: Eloise Balooshi
+Altura: 1,78 m
+--
+Placa FRA5E6P
+Marca: Honda
+Cor: Amarela
+Proprietário: Toshiyuki Nyasango
+Altura: 1,7 m
+--
+Placa 1DOTBE7
+Marca: Honda
+Cor: Vermelho
+Proprietário: Russell Bicet
+Altura: 1,93 m
+--
+Placa S7OYWI8
+Marca: Honda
+Cor: Amarela
+Proprietário: Marco Sagmeister
+Altura: 1,86 m
+--
+Placa CTO2FZC
+Marca: Honda
+Cor: Amarela
+Proprietário: Artem Tops-Alexander
+Altura: 1,75 m
+--
+Placa L3375A9
+Marca: Honda
+Cor: Azul
+Proprietário: Jeremy Bowers
+Altura: 1,86 m
+--
+Placa FCQFDEH
+Marca: Honda
+Cor: Prata
+Proprietário: Kamilla Rietz
+Altura: 1,93 m
+--
+Placa SZX95D0
+Marca: Honda
+Cor: Petróleo
+Proprietário: Radoslaw Licona
+Altura: 1,83 m
+--
+Placa Y4ZXXBW
+Marca: Honda
+Cor: Laranja
+Proprietário: Lyndsie Dudas
+Altura: 1,86 m
+--
+Placa V30VAR4
+Marca: Honda
+Cor: Vermelho
+Proprietário: Franck Gemo
+Altura: 1,75 m
+--
+Placa QF0841F
+Marca: Honda
+Cor: Rosa
+Proprietário: Khairul Morningstar
+Altura: 1,93 m
+--
+Placa 0H6ZOEJ
+Marca: Honda
+Cor: Prata
+Proprietário: Benjamin Parker
+Altura: 1,73 m
+--
+Placa WX53MLK
+Marca: Honda
+Cor: Dourada
+Proprietário: Luis Petkovic
+Altura: 1,88 m
+--
+Placa KZPT3ID
+Marca: Honda
+Cor: Petróleo
+Proprietário: Astrida Roche
+Altura: 1,91 m
+--
+Placa I11EHT6
+Marca: Honda
+Cor: Dourada
+Proprietário: Inna Yu
+Altura: 1,88 m
+--
+Placa VJK4O32
+Marca: Honda
+Cor: Azul
+Proprietário: Darae Charlos
+Altura: 1,88 m
+--
+Placa 62MV0O2
+Marca: Honda
+Cor: Dourada
+Proprietário: Patrik Brown
+Altura: 1,63 m
+--
+Placa CLKEFH7
+Marca: Honda
+Cor: Azul
+Proprietário: Lynsey Bailey
+Altura: 1,55 m
+--
+Placa O8W7XG0
+Marca: Honda
+Cor: Vermelho
+Proprietário: Xiaoxia Yamagata
+Altura: 1,55 m
+--
+Placa JLVL905
+Marca: Honda
+Cor: Rosa
+Proprietário: Mohsen Pyatachenko
+Altura: 1,68 m
+--
+Placa 4XIANUJ
+Marca: Honda
+Cor: Preta
+Proprietário: Anderson Oh
+Altura: 1,91 m
+--
+Placa YOQ9O9O
+Marca: Honda
+Cor: Preta
+Proprietário: Jinhyeok Yamaguchi
+Altura: 1,65 m
+--
+Placa DY2Z7KV
+Marca: Honda
+Cor: Verde
+Proprietário: Nuno Rajabi
+Altura: 1,8 m
+--
+Placa 6YUY18T
+Marca: Honda
+Cor: Prata
+Proprietário: Vladimir Desravine
+Altura: 1,91 m
+--
+Placa ZUQTUSM
+Marca: Honda
+Cor: Laranja
+Proprietário: Zhiwen Piron
+Altura: 1,68 m
+--
+Placa EKLTQFW
+Marca: Honda
+Cor: Azul
+Proprietário: Byungchul Bouqantar
+Altura: 1,65 m
+--
+Placa L337WR9
+Marca: Honda
+Cor: Azul
+Proprietário: Jacqui Maher
+Altura: 1,88 m
+--
+Placa 5AF4SS9
+Marca: Honda
+Cor: Petróleo
+Proprietário: Teerawat Drouin
+Altura: 1,73 m
+--
+Placa BNSN48F
+Marca: Honda
+Cor: Vermelho
+Proprietário: Shugen Elkhedr
+Altura: 1,63 m
+--
+Placa LSLWT8H
+Marca: Honda
+Cor: Petróleo
+Proprietário: Caroline Denayer
+Altura: 1,7 m
+--
+Placa P8ECLQ3
+Marca: Honda
+Cor: Vermelho
+Proprietário: Tina Hristova
+Altura: 1,83 m
+--
+Placa BPW35BI
+Marca: Honda
+Cor: Amarela
+Proprietário: Fernanda Hall
+Altura: 1,63 m
+--
+Placa HJZBM70
+Marca: Honda
+Cor: Vermelho
+Proprietário: Nathan Zhang
+Altura: 1,91 m
+--
+Placa E3DVJXS
+Marca: Honda
+Cor: Laranja
+Proprietário: Renata Rasic
+Altura: 1,8 m
+--
+Placa 88DIKYT
+Marca: Honda
+Cor: Amarela
+Proprietário: Irada Velthooven
+Altura: 1,68 m
+--
+Placa AEK13UO
+Marca: Honda
+Cor: Vermelho
+Proprietário: Frank Awad
+Altura: 1,55 m
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$  grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L377
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L377
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L377
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul
+Placa QOBSFKL
+Marca: Honda
+Cor: Azul
+Proprietário: Aurelie Kirkham
+Altura: 1,8 m
+--
+--
+Placa KCKGOH3
+Marca: Honda
+Cor: Azul
+Proprietário: Vladislava Tichelt
+Altura: 1,7 m
+--
+--
+Placa K38L65K
+Marca: Honda
+Cor: Azul
+Proprietário: Dimitri Kim
+Altura: 1,8 m
+--
+--
+Placa FF6QR6A
+Marca: Honda
+Cor: Azul
+Proprietário: Kurt Fayez
+Altura: 1,58 m
+--
+--
+Placa ZOI4DTW
+Marca: Honda
+Cor: Azul
+Proprietário: Levan Ingram
+Altura: 1,8 m
+--
+--
+Placa L337QE9
+Marca: Honda
+Cor: Azul
+Proprietário: Erika Owens
+Altura: 1,96 m
+--
+Placa CQQ9BIT
+Marca: Honda
+Cor: Azul
+Proprietário: Martyna Kirkbride
+Altura: 1,91 m
+--
+Placa 68CVHT5
+Marca: Honda
+Cor: Azul
+Proprietário: Emily Chow
+Altura: 1,7 m
+--
+--
+Placa KFQHMVH
+Marca: Honda
+Cor: Azul
+Proprietário: Lubomir Frank
+Altura: 1,91 m
+--
+--
+Placa 6GONOJY
+Marca: Honda
+Cor: Azul
+Proprietário: Paul Almeida
+Altura: 1,58 m
+--
+--
+Placa T46S1O8
+Marca: Honda
+Cor: Azul
+Proprietário: Pape Kantarci
+Altura: 1,86 m
+--
+Placa FFRM7XI
+Marca: Honda
+Cor: Azul
+Proprietário: Chris Keller
+Altura: 1,58 m
+--
+--
+Placa RLUC9VG
+Marca: Honda
+Cor: Azul
+Proprietário: Muller Nikcevic
+Altura: 1,8 m
+--
+--
+Placa X4UQ2ON
+Marca: Honda
+Cor: Azul
+Proprietário: Tiff Fehr
+Altura: 1,63 m
+--
+--
+Placa XUC2VZ6
+Marca: Honda
+Cor: Azul
+Proprietário: Brent Queen
+Altura: 1,7 m
+--
+--
+Placa O5EPHK2
+Marca: Honda
+Cor: Azul
+Proprietário: Hagos Kempas
+Altura: 1,65 m
+--
+--
+Placa 6GBK62G
+Marca: Honda
+Cor: Azul
+Proprietário: Ruta Trowbridge
+Altura: 1,73 m
+--
+--
+Placa L337539
+Marca: Honda
+Cor: Azul
+Proprietário: Aron Pilhofer
+Altura: 1,6 m
+--
+--
+Placa CPYKOHM
+Marca: Honda
+Cor: Azul
+Proprietário: Dagmara Balla
+Altura: 1,6 m
+--
+--
+Placa SJ7V5J3
+Marca: Honda
+Cor: Azul
+Proprietário: Maria Figlioli
+Altura: 1,78 m
+--
+--
+Placa GY13NEP
+Marca: Honda
+Cor: Azul
+Proprietário: Sholpan Draudvila
+Altura: 1,6 m
+--
+--
+Placa 5D0T3L7
+Marca: Honda
+Cor: Azul
+Proprietário: Shane Wu
+Altura: 1,73 m
+--
+--
+Placa SMGEWGB
+Marca: Honda
+Cor: Azul
+Proprietário: Ivan Abdusalomov
+Altura: 1,58 m
+--
+--
+Placa RWM24Z6
+Marca: Honda
+Cor: Azul
+Proprietário: Madias Jeffery
+Altura: 1,53 m
+--
+--
+Placa RQEDXRL
+Marca: Honda
+Cor: Azul
+Proprietário: Phillipp Al-Mashhadani
+Altura: 1,6 m
+--
+--
+Placa L337369
+Marca: Honda
+Cor: Azul
+Proprietário: Heather Billings
+Altura: 1,58 m
+--
+--
+Placa 63NCG0U
+Marca: Honda
+Cor: Azul
+Proprietário: Alberto Pedersen
+Altura: 1,93 m
+--
+Placa L337DV9
+Marca: Honda
+Cor: Azul
+Proprietário: Joe Germuska
+Altura: 1,88 m
+--
+--
+Placa X059MKH
+Marca: Honda
+Cor: Azul
+Proprietário: Jill Magdy
+Altura: 1,63 m
+--
+--
+Placa PZ6Z32Z
+Marca: Honda
+Cor: Azul
+Proprietário: Adelinde Mangold
+Altura: 1,78 m
+--
+--
+Placa UC1NG2N
+Marca: Honda
+Cor: Azul
+Proprietário: Svenja Marennikova
+Altura: 1,6 m
+--
+--
+Placa D81PNT0
+Marca: Honda
+Cor: Azul
+Proprietário: Marharyta Willmott
+Altura: 1,83 m
+--
+--
+Placa 5X5XZK1
+Marca: Honda
+Cor: Azul
+Proprietário: Moses Sihame
+Altura: 1,55 m
+--
+--
+Placa 28XRG6U
+Marca: Honda
+Cor: Azul
+Proprietário: Petr Waterfield
+Altura: 1,58 m
+--
+Placa OWFMXT9
+Marca: Honda
+Cor: Azul
+Proprietário: Kelley Nurmagomedov
+Altura: 1,75 m
+--
+--
+Placa L3375A9
+Marca: Honda
+Cor: Azul
+Proprietário: Jeremy Bowers
+Altura: 1,86 m
+--
+--
+Placa VJK4O32
+Marca: Honda
+Cor: Azul
+Proprietário: Darae Charlos
+Altura: 1,88 m
+--
+--
+Placa CLKEFH7
+Marca: Honda
+Cor: Azul
+Proprietário: Lynsey Bailey
+Altura: 1,55 m
+--
+--
+Placa EKLTQFW
+Marca: Honda
+Cor: Azul
+Proprietário: Byungchul Bouqantar
+Altura: 1,65 m
+--
+Placa L337WR9
+Marca: Honda
+Cor: Azul
+Proprietário: Jacqui Maher
+Altura: 1,88 m
+--
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L337
+Altura: 1,8 m
+--
+--
+Placa L337QE9
+Marca: Honda
+Cor: Azul
+Proprietário: Erika Owens
+--
+Altura: 1,73 m
+--
+--
+Placa L337539
+Marca: Honda
+Cor: Azul
+Proprietário: Aron Pilhofer
+--
+Altura: 1,6 m
+--
+--
+Placa L337369
+Marca: Honda
+Cor: Azul
+Proprietário: Heather Billings
+--
+Proprietário: Alberto Pedersen
+Altura: 1,93 m
+--
+Placa L337DV9
+Marca: Honda
+Cor: Azul
+Proprietário: Joe Germuska
+--
+Altura: 1,75 m
+--
+--
+Placa L3375A9
+Marca: Honda
+Cor: Azul
+Proprietário: Jeremy Bowers
+--
+Proprietário: Byungchul Bouqantar
+Altura: 1,65 m
+--
+Placa L337WR9
+Marca: Honda
+Cor: Azul
+Proprietário: Jacqui Maher
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L337
+Altura: 1,8 m
+--
+--
+Placa L337QE9
+Marca: Honda
+Cor: Azul
+Proprietário: Erika Owens
+--
+Altura: 1,73 m
+--
+--
+Placa L337539
+Marca: Honda
+Cor: Azul
+Proprietário: Aron Pilhofer
+--
+Altura: 1,6 m
+--
+--
+Placa L337369
+Marca: Honda
+Cor: Azul
+Proprietário: Heather Billings
+--
+Proprietário: Alberto Pedersen
+Altura: 1,93 m
+--
+Placa L337DV9
+Marca: Honda
+Cor: Azul
+Proprietário: Joe Germuska
+--
+Altura: 1,75 m
+--
+--
+Placa L3375A9
+Marca: Honda
+Cor: Azul
+Proprietário: Jeremy Bowers
+--
+Proprietário: Byungchul Bouqantar
+Altura: 1,65 m
+--
+Placa L337WR9
+Marca: Honda
+Cor: Azul
+Proprietário: Jacqui Maher
+
+PC@DESKTOP-45OC0N2 MINGW64 /e/Curso FullStack/exercicios/assassinato-na-linha-de-comando/misterio (master)
+$ history
+    1  node -v
+    2  C:mkdir Projetos
+    3  cd c:mkdir Projetos
+    4  cd Projetos
+    5  .git
+    6  .close
+    7  -- global
+    8  git config --list
+    9  git config --user.name="Jhonatan Santos"
+   10  git list
+   11  git --list
+   12  git config --list
+   13  git config --user.name "Jhonatan Santos"
+   14  git config --list
+   15  git config --global user.name "Jhonatan Santos"
+   16  git config --list
+   17  git config --global user.email "jhonatanjsantos1990@gmail.com"
+   18  git config --list
+   19  git config --global core.editor nano
+   20  git config --list
+   21  git init
+   22  git status
+   23  git add octocat.txt
+   24  git log
+   25  cd c:\
+   26  git init
+   27  cd..
+   28  cd
+   29  mkdir pasta-da-xuxa
+   30  cd pasta-da-xuxa
+   31  .ls
+   32  ls
+   33  mkdir pasta-da-pasta-da-xuxa
+   34  ls
+   35  rm pasta-da-pasta-da-xuxa
+   36  rm -r pasta-da-pasta-da-xuxa
+   37  ls
+   38  ..cd
+   39  .cd
+   40  cd
+   41  rm r pasta-da-xuxa
+   42  rm -r pasta-da-xuxa
+   43  ls
+   44  clear
+   45  cd
+   46  pokemons
+   47  cd pokemons
+   48  cd git
+   49  cd..
+   50  cd.
+   51  cd git/
+   52  ls
+   53  cd..
+   54  cd desktop
+   55  cd pokemons.txt
+   56  clear
+   57  cat pokemons.txt
+   58  clear
+   59  grep Pikachu
+   60  grep Pikachu pokemons.txt
+   61  grep Pikachu pokemons.txt -b 2
+   62  grep Pikachu pokemons.txt -B 2
+   63  grep Pikachu pokemons.txt -A 3
+   64  grep Pikachu pokemons.txt -A 3 -B2
+   65  grep Pikachu pokemons.txt -A 3 -B 2 -C 4
+   66  ../
+   67  cd ../
+   68  cd../
+   69  cd git
+   70  cat inicio
+   71  cd misterio
+   72  ls
+   73  cd cena-do-crime
+   74  cat cena-do-crime
+   75  grep PISTA
+   76  cat inicio
+   77  cd misterio
+   78  ls
+   79  cat cena-do-crime grep "PISTA"
+   80  MAN
+   81  LS
+   82  grep PISTA
+   83  clear
+   84  grep PISTA ./cena-do-crime.arquivo
+   85  cat PISTA
+   86  GREP PISTA ./cena-do-crime
+   87  ls
+   88  cat pessoas
+   89  grep PISTA ./pessoas
+   90  ..cd
+   91  .cd
+   92  cd
+   93  cd.
+   94  cd..
+   95  clear
+   96  cd misterio
+   97  ls
+   98  cd entrevistas
+   99  ls
+  100  grep PISTA ./entrevistas
+  101  findstr PISTA
+  102  findstr PISTA ./entrevistas
+  103  ..cd
+  104  cd misterio
+  105  cd.
+  106  cd...
+  107  cd r
+  108  /cd
+  109  pwd
+  110  cd /e/Curso FullStack/Exercicios/assassinato-na-linha-de-comando/misterio/
+  111  cd /e/Curso FullStack/Exercicios/assassinato-na-linha-de-comando/misterio
+  112  clear
+  113  cd ..
+  114  ls
+  115  cat pessoas head
+  116  head
+  117  head pessoas
+  118  ls
+  119  cd ruas
+  120  ls
+  121  head ruas
+  122  grep rua
+  123  cat ruas
+  124  cat Alameda_Hooten
+  125  head
+  126  cd ..
+  127  clear
+  128  cd ruas
+  129  ls
+  130  head Divine_Way
+  131  cat Divine_way
+  132  head Devine_Way
+  133  head Hadassah_Way
+  134  head Alameda_Lineham
+  135  head Alameda_Saint_Saveur
+  136  head Alameda_Unity
+  137  clear
+  138  ls
+  139  head Alameda_Senders
+  140  head Avenida_Bartlerr
+  141  head Avenida_Bartlett
+  142  head Avenida_Bellevue
+  143  head Avenida_Bertson
+  144  clear
+  145  ls
+  146  head rua_Knoll
+  147  head rua_lavis
+  148  head rua_lovis
+  149  head rua_lynde
+  150  head rua_marney
+  151  clear
+  152  ls
+  153  head rua_silver
+  154  head rua_sparrow
+  155  head Travessa_addington
+  156  head travessa avalon
+  157  head travessa_avalon
+  158  clear
+  159  ls
+  160  head vila_wesley]
+  161  head vila_wesley
+  162  head vila_trinity
+  163  head vila_terrace
+  164  head vila_randlett
+  165  clar
+  166  clear
+  167  ls
+  168  head vila
+  169  head vila_oak
+  170  head vila_king
+  171  head vila_jamaica
+  172  head vila_island_view
+  173  clear
+  174  ls
+  175  head vila_hard
+  176  head vila_hart
+  177  head vila_buckingham
+  178  head Travessa_williston
+  179  claer
+  180  clear
+  181  ls
+  182  head all
+  183  head dir ruas
+  184  cleaer
+  185  clear
+  186  ls
+  187  head rua_sheldon
+  188  head rua_plainfield
+  189  head rua_potosi
+  190  head rua_proctor
+  191  clear
+  192  ls
+  193  head rua_rena
+  194  head rua_renfrew
+  195  head rua_richardson
+  196  head rua_richmond
+  197  clear
+  198  ls
+  199  head harbor_point_boulevard
+  200  head hadassah_way
+  201  head gray_gardens_east
+  202  head rua_aramon
+  203  head rua_cook
+  204  clear
+  205  ls
+  206  head rua_june
+  207  grep -r ruas
+  208  grep -r PISTA
+  209  grep -r PISTA ./ruas
+  210  c ..
+  211  cd ..
+  212  grep -r PISTA ./ruas
+  213  cd ruas
+  214  clear
+  215  cd ..
+  216  ls
+  217  head automoveis
+  218  head pessoas
+  219  grep - r Jianbo Megannem
+  220  cd ruas
+  221  grep -r Jianbo Megannem
+  222  ls
+  223  clear
+  224  cd ..
+  225  head -n 173 ruas/Rua_Mattapan | tail -n 1
+  226  ls
+  227  cd entrevista
+  228  cd entrevistas
+  229  ls
+  230  cat entrevista-9437737
+  231  cd ..
+  232  ls
+  233  cd pessoas grep Annabel
+  234  cd pessoas
+  235  ls
+  236  grep annabel
+  237  clear
+  238  ls
+  239  cat pessoas
+  240  grep "Annabel"
+  241  clear
+  242  grep "Annabel" pessoas
+  243  ls
+  244  cat entrevistas
+  245  head -n 173 ruas/Rua_Mattapan | tail -n 1
+  246  head -n 40 ruas/Rua_Mattapan | tail -n 1
+  247  head -n 179 ruas/Rua_Mattapan | tail -n 1
+  248  head -n 176 ruas/Rua_Mattapan | tail -n 1
+  249  ls
+  250  head -n entrevistas/entrevista-9437737
+  251  cd entrevistas
+  252  ls
+  253  cat entrevista-9437737
+  254  clear
+  255  cd ..
+  256  cd ..
+  257  cat inicio
+  258  cd misterio
+  259  grep PISTA cena-do-crime
+  260  grep "Annabel" pessoas
+  261  head -n 173 ruas/rua_mattapan | tail -n 1
+  262  cd entrevistas
+  263  cat entrevista-9437737
+  264  man
+  265  man grep
+  266  cd ..
+  267  ls
+  268  cd associacoes
+  269  ls
+  270  cat aaa
+  271  clear
+  272  ls
+  273  head aaa
+  274  head biblioteca_da_cidade
+  275  cd ..
+  276  tail
+  277  clear
+  278  ls
+  279  associacoes
+  280  associacoes
+  281  clear
+  282  cd associacoes
+  283  ls
+  284  tail rei
+  285  tail aaa
+  286  tail aadvantage
+  287  tail clube_de_campo
+  288  clear
+  289  cd inicio
+  290  clear
+  291  cat inicio
+  292  grep PISTA cena-do-crime
+  293  clear
+  294  cat inicio
+  295  cd misterio
+  296  grep PISTA cena-do-crime
+  297  head -n 20 pessoas
+  298  ls
+  299  cd ruas
+  300  head -n 433 rua_walton
+  301  cd ..
+  302  head -n 433 ruas/rua_walton |tail -n 1
+  303  cd ruas
+  304  ls
+  305  grep 433 rua_mystic
+  306  head rua_mystic
+  307  clear
+  308  cd ..
+  309  grep -A 5 "L337" automoveis
+  310  grep -C 5 "Azul" automoveis
+  311  grep -A 5 "Honda;Azul;L337" automoveis
+  312  grep -A 5 "Honda";"Azul";"L337" automoveis
+  313  grep -A 5 "Honda","Azul","L337" automoveis
+  314  grep -C "L337" automoveis
+  315  grep -C 10 "L337" automoveis
+  316  grep -B 5 "L337" automoveis
+  317  ls
+  318  cd ..
+  319  ls
+  320  cd documents/
+  321  ls
+  322  cb ..
+  323  cd ..
+  324  ls
+  325  cd c:/
+  326  cd ..
+  327  cd e:/
+  328  ls
+  329  cd Curso FullStack
+  330  cd 'Curso FullStack'
+  331  ls
+  332  cd exercicios
+  333  ls
+  334  cd assassinato-na-linha-de-comando
+  335  ls
+  336  cat readme.md
+  337  cat inicio
+  338  cd misterio
+  339  grep PISTA cena-do-crime
+  340  ls
+  341  head pessoas
+  342  grep Annabel pessoas
+  343  cd ruas
+  344  head -n 40 Vila_Hart
+  345  head -n 40 Vila_Hart | tail -n 1
+  346  cd ..
+  347  ls
+  348  cd entrevistas
+  349  ls
+  350  cat entrevista-47246024
+  351  cd ..
+  352  cd ruas
+  353  head -n 179 Vila_Buckingham | tail -n 1
+  354  cd ..
+  355  cd entrevistas
+  356  cat entrevista-699607
+  357  cd ..
+  358  ls
+  359  head automoveis
+  360  grep Honda automoveis
+  361  grep -A 3 -B 2 Honda automoveis
+  362  grep -A 3 -B 1 Honda automoveis
+  363  grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3
+  364   grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L377
+  365  grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L377
+  366  grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L377
+  367  grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul
+  368  grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L337
+  369  grep -A 3 -B 1 Honda automoveis | grep -A 3 -B 2 Azul | grep -A 3 -B 3 L337
+
+
+Acho que é o Joe
+  
